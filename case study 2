@@ -1,0 +1,9 @@
+#case study 2
+#PDI in DCHA vs low-flow
+#MDI in DCHA to low-flow
+heart   <- read.table('heart.txt', header = TRUE)
+dcha    <- subset(heart, treatment == 'DCHA')
+lowflow <- subset(heart, treatment == 'Low-flow')
+
+t.test(dcha$pdi, lowflow$pdi)
+t.test(dcha$mdi, lowflow$mdi)
