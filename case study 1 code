@@ -1,5 +1,6 @@
 hr <- read.table('hrPaired.txt', header = TRUE)
 hrDiffs <- hr$flightHR - hr$controlHR
 
-with(hr, t.test(flightHR, controlHR, paired = TRUE))
-t.test(hrDiffs)
+with(hr, t.test(flightHR, controlHR, paired = TRUE)) #another way of writing paired t test
+t.test(hrDiffs) #t test of differences
+t.test(hr$flightHR, hr$controlHR, paired = TRUE) #paired t test
