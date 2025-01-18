@@ -1,0 +1,102 @@
+\documentclass{article}
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx,float}
+\usepackage{multirow,setspace}
+\usepackage{natbib,enumerate}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{termcal} 
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{gensymb}
+
+\setlength{\marginparwidth}{2cm}
+
+\renewcommand{\thesection}{\Alph{section}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\tab}{\hspace{0.5cm}}
+\newcommand{\modref}[1]{(\ref{#1})}
+
+\newcommand{\bbeta}{{\mbox{\boldmath$\beta$}}}
+\newcommand{\bmu}{{\mbox{\boldmath$\mu$}}}
+\newcommand{\balpha}{{\mbox{\boldmath$\alpha$}}}
+\newcommand{\btheta}{{\mbox{\boldmath$\theta$}}}
+\newcommand{\bpi}{{\mbox{\boldmath$\pi$}}}
+\newcommand{\R}{\texttt{R}}
+\newcommand{\Lik}{\mathcal{L}}
+
+\begin{document}
+
+%%% HEADER %%%
+	\begin{center}
+		\HRule \\[0.1cm]
+		\vspace{0.1cm}
+		{ \LARGE \bfseries MATH 2625: Biostatistical Methods\\[0.5cm] Homework 1, due Thursday, January 23 } \\[0.1cm]
+		\HRule \\[0.1cm]
+	\end{center}
+	
+	Please submit a PDF or .doc version of your homework to Canvas by 3:30pm on the due date. Mathematical derivations may be submitted as a separate, scanned file for the Theory questions. Please type \emph{all} responses. You are encouraged to use \R\ for all calculations.
+		
+	\section*{Theory}
+	\begin{enumerate}
+		\item Define the negative sign counting function to be
+			\begin{align*}
+				S^{-}(x) = \sum_{i=1}^n 1(x_i < 0).
+			\end{align*}
+			Show that a sign test constructed using $S^{-}(x)$ is equivalent to one we discussed in class.
+			
+		\item Consider the $p$-value constructions for both the Sign Test and Wilcoxon Signed Rank Tests:
+			\begin{align*}
+				p_S &= \left\{
+					\begin{array}{cc}
+						P(\Sigma^+ \leq S^{+}(d) | H_0) + P(\Sigma^+ \geq n - S^{+}(d) | H_0) & S^{+}(d) < \frac{n}{2}\\
+						P(\Sigma^+ \geq S^{+}(d) | H_0) + P(\Sigma^+ \leq n - S^{+}(d) | H_0) & S^{+}(d) > \frac{n}{2}
+					\end{array}\right.\\
+				p_W &= \left\{
+					\begin{array}{cc}
+						P(\Omega^+ \leq W^{+}(d) | H_0) + P(\Omega^+ \geq \frac{n(n+1)}{2} - W^{+}(d) | H_0) & W^{+}(d) < \frac{n(n+1)}{4}\\
+						P(\Omega^+ \geq W^{+}(d) | H_0) + P(\Omega^+ \leq \frac{n(n+1)}{2} - W^{+}(d) | H_0) & W^{+}(d) > \frac{n(n+1)}{4}
+					\end{array}\right.
+			\end{align*}
+		
+		\begin{enumerate}
+			\item What value does $p_S$ or $p_W$ take on when $S^+(d) = \frac{n}{2}$ or when $W^+(d) = \frac{n(n+1)}{4}$?
+			\item Can you just double the one-sided probability, i.e. the upper (or lower) tail calculation in $p_S$ or $p_W$, to attain the $p$-value? Explain why or why not.
+		\end{enumerate}
+		
+	\end{enumerate}
+
+	\section*{Case Studies}
+	For each of the following, create a structured abstract no longer than 2 pages in length (including figures, tables, and references). The Background section is provided for each and should be included in your write-up. You must write the Methods, Results, and Conclusion sections.
+	\begin{enumerate}
+		\item In this case study, you will examine data from a crossover study examining the impact of exposure to altitude on heart rate on older and susceptible passengers. The data is in file \texttt{hrPaired.txt} where the variable \texttt{ID} denotes the subject, the variable \texttt{Control} is the average heart rate during the control day, and the variable \texttt{Flight} is the average heart rate during the flight day. Additional information of this case study is in the Background section below.
+
+		\subsection*{Background}
+		
+		Older and susceptible passengers and those with preexisting disease are flying with increasing frequency and in-flight cardiac emergencies are a more frequent occurrence. While commercial airplanes fly at altitudes of around 34,000 feet, Federal Aviation Administration (FAA) regulations limit cabin pressurization to an equivalent of between 7,000 and 9,000 feet, with the typical pressurization implemented by most aircraft equal to 8,000 feet. Pressurization to this equivalent level is selected to balance preventing acute altitude-related health symptoms among flyers with operational demands on the aircraft. However, comprehensive acute and longer-term health effects of cabin pressurization have not been well characterized. In particular, the impacts of short term exposure to altitude on cardiovascular health is of particular interest for study among older and vulnerable passengers. To examine possible effects, we conducted a block-randomized crossover design study of the physiological effects under simulated cabin altitudes in a hypobaric pressure chamber among such passengers. The goal of this study is to assess the changes in heart rate between simulated cabin conditions on a flight day versus control conditions. Under flight day conditions, the chamber was pressurized to the equivalent of 7,000 feet altitude. On the control days, the chamber remained at sea level.
+			
+		\item This case study focuses on the effects of different surgical procedures on infant development as measured by the Bayley Scales. The data is in the file \texttt{heart.txt} where the variable \texttt{treatment} contains the grouping variable with the labels \texttt{DCHA} and \texttt{Low-flow} and the variable \texttt{pdi} and \texttt{mdi} contain measurements for the scales themselves. Additional information of this case study is in the Background section below.
+		
+		\subsection*{Background}
+		
+		The Bayley Scales of Infant Development yield scores on two indices---the Psychomotor Development Index (PDI) and the Mental Development Index (MDI)---that can be used to assess a child's level of functioning at approximately one year of age. As part of a study investigating the development and neurologic status of children who had undergone reparative heart congenital heart disease. Specifically, the study was on infants with D-transposition of the great arteries who underwent an arterial-switch operation. D-transposition of the great arteries is a birth defect where the child's arteries formed incorrectly and are transposed, i.e. connected to the wrong ventricles. The children in the study were randomized to one of two different treatment groups, known as ``DCHA'' and ``low-flow bypass.'' The groups differed in the specific way in which the reparative surgery was performed. Deep hypothermic circulatory arrest (DHCA) is a surgical technique that involves cooling the body to temperatures below 20\degree C (68\degree F), and stopping blood circulation and brain function for up to one hour during which time the reparative heart surgery is performed---in this case switching the ventricles the arteries are connected to. In low-flow cardiopulmonary bypass, circulation to the brain is continuously maintained, though at a reduced rate, while the reparative heart surgery is performed. While some physicians feel low-flow bypass is preferable, it has its own risks associated with brain injury. Thus, this study aims to compare PDI in the DCHA group to that in the low-flow group as well as comparing MDI between the two groups.
+		
+	\end{enumerate}
+		
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
