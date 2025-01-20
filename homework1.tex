@@ -46,7 +46,40 @@
 				S^{-}(x) = \sum_{i=1}^n 1(x_i < 0).
 			\end{align*}
 			Show that a sign test constructed using $S^{-}(x)$ is equivalent to one we discussed in class.
+
+			Proof: Let $S^+(x)$ be the positive sign counting function, defined as
+
+
+			$$S^{+}(x) = \sum_{i=1}^n 1(x_i > 0).$$
 			
+			For all $x_i \in X$, $x_i$ must be positive or negative. By the null hypothesis $H_0$, we assume that the probability of being positive and negative are both 1/2, and thus
+
+			$$S^-(x), S^+(x) \sim Bin(n, p = 1/2).$$
+
+			where $n$ is the sample size. Because these two are binomial, we know that for any integer $x$ between 0 and $n$, we expect that 
+
+			$$S^-(x) + S^+(x) = n$$
+			
+			Let $s_0(x)$ be a realization of $S^-(x)$. 
+
+			$$P(S^-(x) \leq s_0(x) | H_0) = F_{S^-(x)}(s_0),$$
+			% P(X < x | aaa) 
+
+			and
+			
+			$$P(S^-(x) \geq n - s_0(x) | H_0) = 1 - F_{S^-(x)}(n - s_0(x) - 1),$$
+
+			where $F_{S^-(x)}(a)$ is the cumulative distribution function of $S^-(x)$. This means that the two-sided p-value of $s_0(x)$ is then
+
+			$$p = P(S^-(x) \leq s_0(x) | H_0) + P(S^-(x) \geq n - s_0(x) | H_0).$$
+
+			However, we know that 
+
+
+
+
+
+			\newpage
 		\item Consider the $p$-value constructions for both the Sign Test and Wilcoxon Signed Rank Tests:
 			\begin{align*}
 				p_S &= \left\{
