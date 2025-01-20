@@ -1,6 +1,24 @@
 hr <- read.table('hrPaired.txt', header = TRUE)
 hrDiffs <- hr$flightHR - hr$controlHR
 
+summary(hr)
+sd(hr$controlHR)
+sd(hr$flightHR)
+summary(hrDiffs)
+sd(hrDiffs)
+
+hist(hrDiffs)
+#hist(hr)
+
 with(hr, t.test(flightHR, controlHR, paired = TRUE)) #another way of writing paired t test
 t.test(hrDiffs) #t test of differences
 t.test(hr$flightHR, hr$controlHR, paired = TRUE) #paired t test
+
+#wilcoxon sign test
+with(hr, wilcox.test(flightHR, controlHR, paired = TRUE)) #wilcoxon sign test
+
+#sign rank
+Sh  <- sum(sign(hrDiffs) > 0)
+nh  <- length(hrDiffs)
+st  <- binom.test(Sh, nh, p = 0.5, alternative = 'two.sided')
+st$p.value
