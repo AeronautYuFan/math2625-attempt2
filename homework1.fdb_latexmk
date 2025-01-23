@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1737409740.57086 "c:/Users/Aeron/Documents/Repos/stats/math2625-attempt2/homework1.tex" "homework1.pdf" "homework1" 1737409741.63925 0
+["pdflatex"] 1737601768.40662 "c:/Users/Aeron/Documents/Repos/stats/math2625-attempt2/homework1.tex" "homework1.pdf" "homework1" 1737601769.14571 0
   "C:/Users/Aeron/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1737235311 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Aeron/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1730427297 11948316 e042cc6d779bf190967185cc980c2ef9 ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -21,7 +21,6 @@
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247596667 32762 7fee39e011c23b3589931effd97b9702 ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
-  "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1247596666 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1247596666 32716 08e384dc442464e7285e891af9f45947 ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1247596667 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1247596667 31099 342ef5a582aacbd3346f3cf4579679fa ""
@@ -67,9 +66,9 @@
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/tools/enumerate.sty" 1718356376 3468 ad69b54642e68f9fdf39ec1a16dd7341 ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/tools/longtable.sty" 1718356376 15033 652f156c2f139501300900190cae68c4 ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "c:/Users/Aeron/Documents/Repos/stats/math2625-attempt2/homework1.tex" 1737409739 9605 171c7f00392f4199ad9ef26b991f6b82 ""
-  "homework1.aux" 1737409741 131 2ba914801f8b15bcbb1bd97d26e7407a "pdflatex"
-  "homework1.tex" 1737409739 9605 171c7f00392f4199ad9ef26b991f6b82 ""
+  "c:/Users/Aeron/Documents/Repos/stats/math2625-attempt2/homework1.tex" 1737601766 10048 d4e84efdc147810ca321d9bb8cfb9442 ""
+  "homework1.aux" 1737601768 131 2ba914801f8b15bcbb1bd97d26e7407a "pdflatex"
+  "homework1.tex" 1737601766 10048 d4e84efdc147810ca321d9bb8cfb9442 ""
   (generated)
   "homework1.aux"
   "homework1.log"
