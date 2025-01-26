@@ -103,13 +103,20 @@
 		\begin{enumerate}
 			\item When $S^+(d) = \frac{n}{2}$, then $p_S = 1$. When we substitute $\frac{n}{2}$ in for $S^+(d)$ (into either equation), we get
 			
-			$$p_S = P(\Sigma^+ \leq n/2|H_0) + P(\Sigma^+ \geq n/2|H_0 ) .$$
+			$$p_S = P(\Sigma^+ \leq \frac{n}{2}|H_0) + P(\Sigma^+ \geq \frac{n}{2}|H_0 ) .$$
 
 			Since $\Sigma^+$ is binomial, these two statements sum to 1 when $S^+(d) = \frac{n}{2}$, no matter what the size of $n$.
 
-			We observe something similar in $p_W$, namely when $W^+(d) = \frac{n(n+1)}{4}$, $p_W = 1$.
+			We observe something similar in $p_W$, namely when $W^+(d) = \frac{n(n+1)}{4}$, $p_W = 1$. When we substitute in $W^+(d) = \frac{n(n+1)}{4}$ into the p-value constructions (either the positive or negative end), we observe
 
-			\item 
+			$$p_W = P(\Omega^+ \leq \frac{n(n+1)}{4} | H_0) + P(\Omega^+ \geq \frac{n(n+1)}{2} - \frac{n(n+1)}{4} | H_0).$$
+
+			This simplifies into
+
+			$$p_W = P(\Omega^+ \leq \frac{n(n+1)}{4} | H_0) + P(\Omega^+ \geq \frac{n(n+1)}{4} | H_0).$$
+
+			We can observe that this sum equals 1.
+			
 			\item Yes, we can double the one-sided probability in either test. This is because the null hypothesis $H_0$ states that the chance of having a positive or negative sign, either ranked or unranked, is expected to be equal, so the chance of either extreme is the same.
 		\end{enumerate}
 		
