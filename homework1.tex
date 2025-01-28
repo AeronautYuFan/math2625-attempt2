@@ -30,6 +30,8 @@
 \newcommand{\R}{\texttt{R}}
 \newcommand{\Lik}{\mathcal{L}}
 
+\renewcommand{\thesubfigure}{\arabic{subfigure}}
+
 \begin{document}
 
 %%% HEADER %%%
@@ -218,7 +220,7 @@
 		Using both the PDI and MDI scales, the study tracked the psychomotor and mental development of 143 infants who underwent an arterial-switch operation. The infants were randomly assigned a treatment, with 70 receiving low-flow bypass and 73 undergoing DCHA. Analysis of the two operations were done using two-sample $T$-Tests along with a Mann-Whitney $U$ Test for sensitivity. All tests were conducted at the nominal level.
 
 		\subsection*{Results}
-		Hello 
+		Summary statistics are provided in Table 1, summarizing the center and variance of PDI and MDI scores for infants who underwent DCHA and low-flow bypass. Figures 1 \& 2 show the distribution of PDI scores for children who underwent DCHA and low-flow (respectively). Figures 3 \& 4 show their corresponding MDI scores.
 		\begin{table}[h!]
 			\centering
 			\footnotesize
@@ -235,6 +237,55 @@
 			\bottomrule
 			\end{tabular}
 		\end{table}
+
+		
+		\begin{figure}[h!]
+			\centering
+			\begin{subfigure}[b]{0.23\textwidth}  % Adjust width as needed
+				\centering
+				\includegraphics[width=\textwidth]{CS2_DCHA_PDI.png}
+				\caption{PDI of Infants Receiving DCHA}
+			\end{subfigure}
+			\hfill
+			\begin{subfigure}[b]{0.23\textwidth}  % Adjust width as needed
+				\centering
+				\includegraphics[width=\textwidth]{CS2_LF_PDI.png}
+				\caption{PDI of Infants Receiving Low-Flow}
+			\end{subfigure}
+			\hfill
+			\begin{subfigure}[b]{0.23\textwidth}  % Adjust width as needed
+				\centering
+				\includegraphics[width=\textwidth]{CS2_DCHA_mdi.png}
+				\caption{MDI of Infants Receiving DCHA}
+			\end{subfigure}
+			\hfill
+			\begin{subfigure}[b]{0.23\textwidth}  % Adjust width as needed
+				\centering
+				\includegraphics[width=\textwidth]{CS2_LF_mdi.png}
+				\caption{MDI of Infants Receiving Low-Flow}
+			\end{subfigure}
+			\caption{Figures 1-4: Distributions of PDI and MDI Scores}
+			\label{fig:four_images}
+		\end{figure}
+		
+		\newpage
+
+		\begin{table}[h!]
+			\centering
+			\footnotesize
+			\caption{T-test Results}
+			\label{tab:t_test_results}
+			\begin{tabular}{lccccc}
+				\toprule
+				\textbf{Test}   & \textbf{T-Statistic}  & \textbf{Estimates}           & \textbf{95\% Confidence Interval} & \textbf{p-value} \\
+				\midrule
+				PDI             & t = -2.244            & DCHA: 91.92, low-flow: 97.77 & (-11.01, -0.70)                  & 0.0264          \\
+				MDI             & t = -1.273            & DCHA: 103.08, low-flow: 106.40 & (-8.47, 1.83)                    & 0.2051          \\
+				\bottomrule
+			\end{tabular}
+		\end{table}
+			
+			
 			
 			
 			
