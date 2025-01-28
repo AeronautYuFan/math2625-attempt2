@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1738073246.35479 "c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework1.tex" "homework1.pdf" "homework1" 1738073247.76191 0
+["pdflatex"] 1738080797.8653 "c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework1.tex" "homework1.pdf" "homework1" 1738080799.35303 0
   "C:/Users/Aeron/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1738073244 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Aeron/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1730427297 11948316 e042cc6d779bf190967185cc980c2ef9 ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -55,6 +55,7 @@
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/base/article.cls" 1719393830 20144 67a5f8e0f9e445e8ec6834e595cebdc9 ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/base/ifthen.sty" 1719393830 5525 3792dcd5bc92158cfaf00cc591e557cf ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/base/size10.clo" 1719393830 8448 358bf3de18513f057a13bdc6e6770c41 ""
+  "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/base/textcomp.sty" 1719393830 2846 50113a9b2387b6447504672739a4a25b ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/booktabs/booktabs.sty" 1579093635 6253 f1cb470c9199e7110a27851508ed7a5c ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption.sty" 1696169587 56128 c2ccf1a29d78c33bc553880402e4fb9a ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption3.sty" 1696169587 72619 ee90b6612147680fd73c3b1406a74245 ""
@@ -82,6 +83,10 @@
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1716480499 29785 9f93ab201fe5dd053afcc6c1bcf7d266 ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/latex2pydata/latex2pydata.sty" 1732456858 18225 d5efd44e284c309ccb2c4367284c4a38 ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/lineno/lineno.sty" 1686931249 154524 d78e0d3f9a3cdfd2cab61cd321c9281c ""
+  "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/listings/listings.cfg" 1727541453 1865 301ae3c26fb8c0243307b619a6aa2dd3 ""
+  "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/listings/listings.sty" 1727541453 81640 997090b6c021dc4af9ee00a97b85c5b4 ""
+  "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstmisc.sty" 1727541453 77051 be68720e5402397a830abb9eed5a2cb4 ""
+  "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstpatch.sty" 1727541453 353 9024412f43e92cd5b21fe9ded82d0610 ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/minted/minted.sty" 1732456895 70749 dc0cdf77b401e30d167adcbacd1fc3ce ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/multirow/multirow.sty" 1731767677 6696 886c9f3087d0b973ed2c19aa79cb3023 ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/natbib/natbib.sty" 1292249081 46712 1c8843383c0bd05870c45fa0ebea6cc2 ""
@@ -95,9 +100,9 @@
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/upquote/upquote.sty" 1335534756 1088 517e01cde97c1c0baf72e69d43aa5a2e ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "HistogramCaseStudy1.png" 1738038322 7115 6e61b7ec6ae019578e400dcd64cb5201 ""
-  "c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework1.tex" 1738073127 15287 896fa589a782ad772ec4baffe603ddd2 ""
-  "homework1.aux" 1738073247 1023 22b985ab0e2bd3467ad2357b8ee428d4 "pdflatex"
-  "homework1.tex" 1738073127 15287 896fa589a782ad772ec4baffe603ddd2 ""
+  "c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework1.tex" 1738080796 15736 6012e2ef70c48121e1e1cd1f78910b93 ""
+  "homework1.aux" 1738080799 1023 22b985ab0e2bd3467ad2357b8ee428d4 "pdflatex"
+  "homework1.tex" 1738080796 15736 6012e2ef70c48121e1e1cd1f78910b93 ""
   (generated)
   "homework1.aux"
   "homework1.log"
