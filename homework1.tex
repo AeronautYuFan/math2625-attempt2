@@ -220,7 +220,7 @@
 		Using both the PDI and MDI scales, the study tracked the psychomotor and mental development of 143 infants who underwent an arterial-switch operation. The infants were randomly assigned a treatment, with 70 receiving low-flow bypass and 73 undergoing DCHA. Analysis of the two operations were done using two-sample $T$-Tests along with a Mann-Whitney $U$ Test for sensitivity. All tests were conducted at the nominal level.
 
 		\subsection*{Results}
-		Summary statistics are provided in Table 1, summarizing the center and variance of PDI and MDI scores for infants who underwent DCHA and low-flow bypass. Figures 1 \& 2 show the distribution of PDI scores for children who underwent DCHA and low-flow (respectively). Figures 3 \& 4 show their corresponding MDI scores.
+		Summary statistics are provided in Table 4, summarizing the center and variance of PDI and MDI scores for infants who underwent DCHA and low-flow bypass. Figures 1 \& 2 show the distribution of PDI scores for children who underwent DCHA and low-flow (respectively). Figures 3 \& 4 show their corresponding MDI scores.
 		\begin{table}[h!]
 			\centering
 			\footnotesize
@@ -267,23 +267,56 @@
 			\caption{Figures 1-4: Distributions of PDI and MDI Scores}
 			\label{fig:four_images}
 		\end{figure}
-		
+
 		\newpage
 
 		\begin{table}[h!]
 			\centering
 			\footnotesize
-			\caption{T-test Results}
+			\caption{T-test Results Indicate Significant Difference in PDI, but not MDI Values}
 			\label{tab:t_test_results}
 			\begin{tabular}{lccccc}
 				\toprule
-				\textbf{Test}   & \textbf{T-Statistic}  & \textbf{Estimates}           & \textbf{95\% Confidence Interval} & \textbf{p-value} \\
+				\textbf{Test}   & \textbf{T-Value}  & \textbf{Estimates}           & \textbf{95\% Confidence Interval} & \textbf{p-value} \\
 				\midrule
 				PDI             & t = -2.244            & DCHA: 91.92, low-flow: 97.77 & (-11.01, -0.70)                  & 0.0264          \\
 				MDI             & t = -1.273            & DCHA: 103.08, low-flow: 106.40 & (-8.47, 1.83)                    & 0.2051          \\
 				\bottomrule
 			\end{tabular}
 		\end{table}
+
+		As demonstrated by the T-Test results in Table 5, there is a marginally significant difference in PDI scores between infants who underwent DCHA and infants who underwent low-flow bypass $(p = 0.0264, df = 141,$ 95\% CI = $(-11.01, -0.70))$. This is backed up by the sensitivity analysis (see Table 6), which suggests that infants who underwent DCHA had a lower PDI score than those who underwent low-flow bypass. 
+
+		However, the MDI scores did not appear to be impacted by either treatment, as we did not find evidence to support there being a difference in MDI between DCHA and low-flow bypass $(p = 0.2051, df = 141,$ 95\% CI = $(-8.47, 1.83))$.
+
+
+		\begin{table}[h!]
+			\centering
+			\footnotesize
+			\caption{Mann-Whitney Test Results Support T-Test Findings}
+			\label{tab:mann_whitney_results}
+			\begin{tabular}{lcccc}
+			\toprule
+			\textbf{Outcome} & \textbf{W-Value} & \textbf{Difference $(\Delta)$} & \textbf{95\% Confidence Interval} & \textbf{p-value} \\
+			\midrule
+			PDI              & 1975.5              & -6.000                  & (-12.00, -0.00)                & 0.0189            \\
+			MDI              & 2140.5              & -4.000                  & (-9.00, 0.00)                 & 0.0942           \\
+			\bottomrule
+			\end{tabular}
+		\end{table}
+
+
+
+		\subsection*{Discussion}
+		Based on our analyses, we have evidence to support there being a statistically significant difference at the nominal level between the PDI of infants who receive DCHA as opposed to low-flow bypass during an arterial-switch operation. However, we cannot determine whether there is a true difference between MDI scores for infants undergoing the DCHA technique vs. the low-flow approach. Thus, while the brain injury-risk low-flow narrative (which would indicate lower PDI and MDI scores for low-flow patients) is not supported by our analysis, we can say that the results suggest that low-flow bypass may be more supportive of psychomotor outcomes in particular. This is in line with other research pertaining to infants undergoing heart surgery with one of the two circulatory techniques (Bellinger, et al., 1995, n = 155, even when adjusted for sociodemographic and perioperative variables).
+
+		Bellinger and colleagues also failed an association between MDI and technique as well. Peripheral findings like Pigula and colleagues (2000) (n = 12) also demonstrate more positive subclinical outcomes like higher cerebral oxygen saturations and faster reestablishment of baseline cerebral bloodflows for low-flow infants compared to DCHA infants, both of which would lessen the risk of hypoxic brain injury. Myunng and colleagues (2004) (n = 16) had a similar finding in an animal model (neonatal pigs), which showed less neurologic injury and fewer abnormal neurobehavioral scores among the pigs which received low-flow perfusion. However, Visconti et. al. (2006) (n = 29) find no statistically significant difference in MDI or PDI in infants one year out from surgery between either support approach. 
+		
+		Our study was limited by the moderate normality of our sample, namely the skewed low-flow MDI distribution. Thus, more robust sampling in a future study may produce a different finding for MDI. Furthermore, our results taken with Bellinger and colleagues indicate that low-flow support may produce better long-term psychomotor outcomes for infants undergoing cardiac surgery, and pediatric surgeons should look into investment in such an approach.
+		
+
+			
+			
 			
 			
 			
