@@ -11,6 +11,7 @@
 \usepackage{xcolor}
 \usepackage{enumitem}
 \usepackage{gensymb}
+\usepackage{booktabs}
 
 \setlength{\marginparwidth}{2cm}
 
@@ -133,15 +134,74 @@
 
 		\subsection*{Methods}
 
-		The trial involved 33 participants, all of whom were randomly selected from people who were older and more susceptible to in-flight cardiac emergencies. Primary analysis of the collected data was conducted using a paired t-test. Sensitivity analysis was performed using a Wilcoxon signed-rank test. All hypothesis tests were conducted at the nominal level. For the baseline heart rates, we observed a mean of 78.75 beats per minute (BPM) and a standard deviation of 9.123 BPM. The median heart rate was 77.82 BPM, with a median absolute difference of 10.35 BPM. 
+		The trial involved 33 randomly selected participants who were older and more susceptible to in-flight cardiac emergencies. Data was analyzed at the nominal level using a paired T-test, with a supporting sensitivity analysis through the Wilcoxon sign-rank test. A mean baseline heart rate of 78.75 beats per minute (BPM) was observed (SD: 9.12) along with a median of 77.82 BPM and median absolute difference of 10.35 BPM. In-flight heart rate was simulated in a hypobaric pressure chamber. We observed a mean in-flight heart rate of 81.21 BPM (SD: 10.56 BPM) along with a median of 82.05 BPM. The MAD for in-flight heart rate was 14.21 BPM. We observed a mean difference between heart rates of 2.46 BPM (SD: 6.00 BPM). The median difference was 1.75 BPM, while the MAD was 5.22 BPM.
 
-		To simulate in flight conditions, the same participants' heart rates were measured at flying altitude in a hypobaric pressure chamber. While at in-flight altitude, the observed mean heart rate was 81.21 BPM with a standard deviation of 10.56 BPM. The median heart rate among participants during in-flight conditions was 82.05 BPM, with a median absolute difference of 14.21 BPM.
+		\subsection*{Results}
 
-		The mean difference observed between one subject’s baseline and their at-altitude heart rate was 2.462 BPM higher at altitude, with a standard deviation of BPM. The median difference in heart rate was 1.750 BPM, with a median absolute difference of 2.462 BPM.
+		A summary of the results as stated above are provided in Table 1, including both baseline and in flight heart rates and summaries of the observed differences. Figure 1 (below) shows that these differences are fairly normal in distribution, despite the small number of participants.
 
+		\begin{table}[h!]
+			\centering
+			\footnotesize
+			\caption{Heart Rate Summary Statistics (in BPM)}
+			\label{tab:heart_rate_summary}
+			\begin{tabular}{lccc}
+			\toprule
+			\textbf{Measure}         & \textbf{Baseline Heart Rate} & \textbf{In-Flight Heart Rate} & \textbf{Difference} \\ 
+			\midrule
+			\textbf{Median}          & 77.82                        & 82.05                         & 1.750               \\ 
+			\textbf{MAD}             & 10.35                        & 14.21                         & 5.22                \\ 
+			\textbf{Mean}            & 78.75                        & 81.21                         & 2.462               \\ 
+			\textbf{Standard Deviation} & 9.123                      & 10.560                        & 5.998               \\ 
+			\bottomrule
+			\end{tabular}
+			\end{table}
 
+			As shown in Table 2, we found evidence to support the claim that for people who are older and more susceptible to cardiac emergencies, their in-flight heart rate is different to their baseline heart rate $(p = 0.0246, df = 32,$ 95\% CI = $(0.335, 4.589))$. This result is consistent with the sensitivity analysis (see Table 3), which also found marginally significance in the difference between heart rates $(p = 0.0253, W = 405,$ 95\% CI = $(0.344, 4.315))$.
 
+			\begin{table}[h!]
+				\centering
+				\footnotesize
+				\caption{Paired T-Test Results Indicate Marginally Significant Difference in Heart Rate}
+				\label{tab:t_test_results}
+				\begin{tabular}{lccccc}
+				\toprule
+				\textbf{T-Value}  & \textbf{df} & \textbf{Mean Difference (BPM)} & \textbf{95\% Confidence Interval} & \textbf{p-value} \\
+				\midrule
+				2.3582      & 32          & 2.462                     & (0.335, 4.589)                    & 0.0246            \\
+				\bottomrule
+				\end{tabular}
+			\end{table}
 
+			\begin{table}[h!]
+				\centering
+				\footnotesize
+				\caption{Wilcoxon Test Confirms Findings of T-Test of Significant Difference in Heart Rate}
+				\label{tab:wilcoxon_results}
+				\begin{tabular}{lcccc}
+				\toprule
+				\textbf{Test Statistic} & \textbf{Hodges-Lehmann Estimator} & \textbf{95\% Confidence Interval} & \textbf{p-value} \\
+				\midrule
+				W = 405                 & 2.157                           & (0.344, 4.315)                    & 0.0253            \\
+				\bottomrule
+				\end{tabular}
+			\end{table}
+
+			\newpage
+			
+			
+			
+			
+
+			\begin{figure}[h!]
+				\centering
+				\includegraphics[width=0.6\textwidth]{HistogramCaseStudy1.png}
+				\caption{Histogram of Heart Rate Differences Between Baseline and In-Flight Conditions}
+				\label{fig:histogram}
+			\end{figure}
+			
+
+		\newpage
 
 		\newpage
 
