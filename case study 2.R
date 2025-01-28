@@ -1,10 +1,9 @@
-#case study 2
-#PDI in DCHA vs low-flow
-#MDI in DCHA to low-flow
+#case study 2: PDI & MDI in DCHA vs low-flow
 heart   <- read.table('heart.txt', header = TRUE)
 dcha    <- subset(heart, treatment == 'DCHA')
 lowflow <- subset(heart, treatment == 'Low-flow')
 
+#dcha summary statistics
 summary(dcha)
 sd(dcha$pdi)
 sd(dcha$mdi)
@@ -13,6 +12,7 @@ mad(dcha$mdi)
 hist(dcha$pdi)
 hist(lowflow$pdi)
 
+#low-flow summary statistics
 summary(lowflow)
 sd(lowflow$pdi)
 sd(lowflow$mdi)
@@ -21,14 +21,13 @@ mad(lowflow$mdi)
 hist(dcha$mdi)
 hist(lowflow$mdi)
 
+#two sample t-testing
 t.test(pdi ~ treatment, heart)
 t.test(mdi ~ treatment, heart)
 
-#t.test(dcha$pdi, lowflow$pdi)
-#t.test(dcha$mdi, lowflow$mdi)
+#t.test(dcha$pdi, lowflow$pdi) alternate code which produces the same results
+#t.test(dcha$mdi, lowflow$mdi) alternate code which produces the same results
 
-#t1 <- sum((dcha$pdi)*rank(abs(heart$pdi)))
-#t2 <- sum((lowflow$pdi)*rank(abs(heart$pdi)))
-
+#wilcoxon rank sum testing
 wilcox.test(pdi ~ treatment, data = heart, conf.int = TRUE)
 wilcox.test(mdi ~ treatment, data = heart, conf.int = TRUE)
