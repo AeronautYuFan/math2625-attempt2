@@ -1,3 +1,11 @@
+#install.packages('DescTools')
+#install.packages('Rfit')
+library(showtext)
+library(DescTools)
+library(Rfit)
+font_add(family = "ComputerModern", regular = "cmunrm.ttf") #for consistent formatting in LaTex
+showtext_auto()
+
 #case study 2: PDI & MDI in DCHA vs low-flow
 heart   <- read.table('heart.txt', header = TRUE)
 dcha    <- subset(heart, treatment == 'DCHA')
@@ -9,8 +17,14 @@ sd(dcha$pdi)
 sd(dcha$mdi)
 mad(dcha$pdi)
 mad(dcha$mdi)
-hist(dcha$pdi)
-hist(lowflow$pdi)
+hist(dcha$pdi, main = "", col = "lightblue",
+     ylab = "Participants", 
+     xlab = "Psychomotor Development Index (PDI)",
+     family = "ComputerModern")
+hist(lowflow$pdi, main = "", col = "lightgreen",
+     ylab = "Participants", 
+     xlab = "Psychomotor Development Index (PDI)",
+     family = "ComputerModern")
 
 #low-flow summary statistics
 summary(lowflow)
@@ -18,8 +32,14 @@ sd(lowflow$pdi)
 sd(lowflow$mdi)
 mad(lowflow$pdi)
 mad(lowflow$mdi)
-hist(dcha$mdi)
-hist(lowflow$mdi)
+hist(dcha$mdi, main = "", col = "darkblue",
+     ylab = "Participants", 
+     xlab = "Mental Development Index (MDI)",
+     family = "ComputerModern")
+hist(lowflow$mdi, main = "", col = "darkgreen",
+     ylab = "Participants", 
+     xlab = "Mental Development Index (MDI)",
+     family = "ComputerModern")
 
 #two sample t-testing
 t.test(pdi ~ treatment, heart)
