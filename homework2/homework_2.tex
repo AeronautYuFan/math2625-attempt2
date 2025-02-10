@@ -1,0 +1,117 @@
+\documentclass{article}
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx,float}
+\usepackage{multirow,setspace}
+\usepackage{natbib,enumerate}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{termcal} 
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{gensymb}
+
+\setlength{\marginparwidth}{2cm}
+
+\renewcommand{\thesection}{\Alph{section}}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\tab}{\hspace{0.5cm}}
+\newcommand{\modref}[1]{(\ref{#1})}
+
+\newcommand{\bbeta}{{\mbox{\boldmath$\beta$}}}
+\newcommand{\bmu}{{\mbox{\boldmath$\mu$}}}
+\newcommand{\balpha}{{\mbox{\boldmath$\alpha$}}}
+\newcommand{\btheta}{{\mbox{\boldmath$\theta$}}}
+\newcommand{\bpi}{{\mbox{\boldmath$\pi$}}}
+\newcommand{\R}{\texttt{R}}
+\newcommand{\Lik}{\mathcal{L}}
+
+\begin{document}
+
+%%% HEADER %%%
+	\begin{center}
+		\HRule \\[0.1cm]
+		\vspace{0.1cm}
+		{ \LARGE \bfseries MATH 2625: Biostatistical Methods\\[0.5cm] Homework 2, due Tuesday, February 11 } \\[0.1cm]
+		\HRule \\[0.1cm]
+	\end{center}
+	
+	Please submit a PDF or .doc version of your homework to Canvas by 3:30pm on the due date. Please type \emph{all} responses. You are encouraged to use \R\ for all calculations.
+		
+	\section*{Theory}
+	\begin{enumerate}
+		\item Suppose $m = {G \choose 2}$ tests are conducted for $G \in \mathbb{Z}^{+}$ and $> 2$. Let $X$ denote the RV that counts the number of rejected tests out of $m$. Under the null hypothesis that all $m$ null hypotheses are true, characterize the distribution of $X$ under each of the following rejection procedures:
+		\begin{enumerate}
+			\item Testing at the nominal $\alpha$ of 0.05.
+
+			When a null hypothesis is true, this means that the probability of rejecting said test at the nominal level is $p = 0.05$. Suppose $Y$ was a random variable describing this binary outcome of either rejecting or failing to reject the null hypothesis (for each individual test). Then we can observe that
+			
+			$$Y \sim Bern(0.05).$$
+
+			Since we defined $X$ as the random variable counting the number of rejected tests, this means that
+
+			$$X \sim Bin(m, 0.05).$$
+
+			\item Using the Bonferroni correction with nominal $\alpha$.
+			
+			When we apply a Bonferroni correction to the set of multiple hypothesis tests (with all null hypotheses still being true), then we observe that the random variable $X$ which counts the number of rejected tests takes on a binomial distribution similar to that described in part (a):
+
+			$$X \sim Bin(m, \frac{0.05}{m}).$$
+
+			\item Under the \v{S}id\'ak correction with nominal $\alpha$.
+			
+			The \v{S}id\'ak correction results in $X$ being binomial similar to the results demonstrated in (a) and (b):
+
+			$$X \sim Bin(m, 1 - (0.95)^{1/m}).$$
+			
+		\end{enumerate}
+		For each, justify your choice and state any necessary assumptions.
+		
+
+		\newpage
+		\item Show Pearson's correlation coefficient, $r$, is a function of the OLS estimate, $\hat{\beta}_1$, i.e. show result on slide 146
+		\begin{align*}
+			r &= \frac{s_x}{s_y}\hat{\beta}_1,
+		\end{align*}
+		where $s_x$ and $s_y$ are the sample standard deviations of $x$ and $y$, respectively.
+
+
+	\end{enumerate}
+
+
+
+	\newpage
+	\section*{Case Study}
+	For each of the following case studies, create a structured abstract no longer than 4 pages in length (including figures, tables, and references). The Background sections are provided for each and should be included in your write-up. You must write the Methods, Results, and Conclusion sections. Code should be included in an appendix as well.
+
+	\begin{enumerate}
+		\item In this case study, you will examine data on workers in the cadmium industry, focusing on a possible relationship between the level of exposure to cadmium and an indicator of lung health. The dataset is in the \texttt{ISwR} library and named \texttt{vitcap2}. It contains the variables \texttt{group} indicating cadmium exposure status (1 for exposed $>10$ years, 2 for exposure $<10$ years, and 3 for not exposed), each workers \texttt{age} in years, and each workers \texttt{vital.capacity}, measured in liters.
+
+		\subsection*{Background}
+				
+		Vital capacity, a measure of lung volume defined as the maximum amount of air a person can expel from their lungs after taking a maximum inhalation, can be used to help diagnose underlying lung disease or dysfunction. If vital capacity is lower than expected, further testing for possible disease or other complications is warranted. Exposure to cadmium, even at low doses, may have impacts on kidney and bone health and at high levels may damage the lungs. Cadmium production increased considerably over the course of the 20th Century and is used across a number of different industries. To assess the potential impact exposure to cadmium might have, we examined the vital capacity in workers from industries that use cadmium in various production processes. Workers were randomly selected from nine different factories: eight PVC factories using cadmium stabilizers in the compounding of PVC and one cadmium-nickel battery factory. We classified the workers as having long term exposure ($>10$ years exposure to cadmium), short to medium term exposure ($<10$ years exposure), and no exposure. Our primary goal is to see if exposure to cadmium impacts the lung functioning of the workers in the industry. It is well known, however, that vital capacity also depends on a number of additional factors, including a person's age. Older workers may also be more likely to have longer periods of exposure, thus we also examine workers' age as a possible confounder.
+		
+		\item The second case study considers a study of the lung functioning of patients with cystic fibrosis and how it relates to body mass as well as age. The data is alongside this assignment in the file \texttt{cf.txt} and contains the primary outcome of interest \texttt{fev1} (the forced expiratory volume in one second). The primary predictors of interest are \texttt{bmp} (body mass as a percent of normal binned to \texttt{very low}, \texttt{low}, and \texttt{near normal}) and \texttt{weight} (in \texttt{kg}). A possible confounder of interest, \text{age} in years, is included as well.
+		
+		\subsection*{Background}
+		
+		Cystic fibrosis is a genetic disorder that affects the lungs, among other major organs. A mutation in the cystic fibrosis transmembrane conductance regulator (CFTR) gene is the cause, resulting in the dysfunction of the CFTR protein which facilitates the transportation of chloride to the cell surface. Without the additional chloride, mucus lining the cells of vital organs becomes thick and viscous, clogging airways and resulting in difficulty breathing. Additional complications in increased risk of bacterial infection and respiratory failure. Poor growth or weight gain is a common complication as well, and often an early indicator of cystic fibrosis. To assess the relationship between growth and weight and lung functioning in patients with cystic fibrosis, we recruited 23 patients between the ages of 7 and 23 years old. Our primary outcome of interest is the forced expiratory volume in one second (FEV1), a measure of how much air the lungs can expel within the first second of exhaling. We wish to relate FEV1 to two predictors of interest related to growth and weight, specifically the body mass category of the patient and their weight ($kg$). Cystic fibrosis patients with poorer growth relative to normally developing children and lower weight may have lower lung functioning. Age may be potential confounder as lung functioning tends to improve with age and weight should increase as the patient gets older. Thus we will also examine potential age confounding in our analysis.
+		
+	\end{enumerate}
+		
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
