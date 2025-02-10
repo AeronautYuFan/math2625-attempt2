@@ -76,6 +76,25 @@
 		\end{align*}
 		where $s_x$ and $s_y$ are the sample standard deviations of $x$ and $y$, respectively.
 
+		Pearson correlation coefficent is defined as
+
+		$$\rho = \frac{Cov(X, Y)}{\sigma_X \sigma_Y}.$$
+
+		We know that
+
+		\begin{align*}
+			Cov(X, Y) & = E[(X - E(X))(Y - E(Y))] \\
+			& = E[XY - E(X)Y - E(Y)X + E(X)E(Y)] \\
+			& = E(XY) - E(X)E(Y) - E(X)E(Y) + E(X)E(Y) \\
+			& = E(XY) - E(X)E(Y) \\
+		\end{align*}
+		
+		When we estimate this, we substitute in sample standard deviations for the variances of $X$ and $Y$.
+
+		$$r = \frac{Cov(X, Y)}{s_x s_y}.$$
+
+		When we rewrite the covariance term, we get 
+
 
 	\end{enumerate}
 
