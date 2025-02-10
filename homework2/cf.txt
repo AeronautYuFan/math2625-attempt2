@@ -1,0 +1,26 @@
+"age" "weight" "bmp" "fev1"
+7 13.1 "Very Low" 32
+7 12.9 "Very Low" 19
+8 14.1 "Very Low" 22
+8 16.2 "Very Low" 41
+8 21.5 "Near Normal" 52
+9 17.5 "Very Low" 44
+11 30.7 "Low" 28
+12 28.4 "Very Low" 18
+12 25.1 "Very Low" 24
+13 31.5 "Very Low" 23
+13 39.9 "Low" 39
+14 42.1 "Near Normal" 26
+14 45.6 "Near Normal" 45
+15 51.2 "Near Normal" 45
+16 35.9 "Very Low" 31
+17 34.8 "Low" 29
+17 44.7 "Low" 49
+17 60.1 "Near Normal" 29
+17 42.6 "Very Low" 38
+19 37.2 "Low" 21
+19 54.6 "Low" 37
+20 64 "Low" 34
+23 73.8 "Near Normal" 57
+23 51.1 "Low" 33
+23 71.5 "Near Normal" 52
