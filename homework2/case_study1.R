@@ -13,16 +13,15 @@ hist(noExposure$vital.capacity, breaks = 12, col = rgb(0.68, 0.85, 0.90, alpha =
 hist(midExposure$vital.capacity, breaks = 12, col = rgb(0.56, 0.93, 0.56, alpha = 0.5) , add = T)
 hist(longExposure$vital.capacity, breaks = 12, col = rgb(1, 1, 0, alpha = 0.5), add = T)
 
-summary(noExposure)
-summary(midExposure)
-summary(longExposure)
+summary(vitcap2$vital.capacity)
+summary(noExposure$vital.capacity)
+summary(midExposure$vital.capacity)
+summary(longExposure$vital.capacity)
 
-# replace this with variance if possible but it appears variances are unequal
-# so we have to use kruskall wallis over anova
-sd(noExposure$vital.capacity) 
-
+sd(vitcap2$vital.capacity)
 sd(longExposure$vital.capacity)
 sd(midExposure$vital.capacity)
+sd(noExposure$vital.capacity) 
 
 kruskal.test(vital.capacity ~ group, data = vitcap2)
 
@@ -35,4 +34,4 @@ plot(vital.capacity ~ age, data = vitcap2)
 with(vitcap2, cor.test(age, vital.capacity, method = 'spearman' ))
 with(noExposure, cor.test(age, vital.capacity, method = 'spearman' ))
 with(midExposure, cor.test(age, vital.capacity, method = 'spearman' ))
-with(longExposure, cor.test(age, vital.capacity, method = 'kendall' ))
+with(longExposure, cor.test(age, vital.capacity, method = 'spearman' ))
