@@ -13,7 +13,7 @@ par(family = 'ComputerModern')
 
 # case study 1
 
-data("vitcap2")
+data('vitcap2')
 
 # subsets of the different groups for histogram construction
 # this block creates dataframes to store the different treatment arms and also puts them in a list
@@ -46,37 +46,48 @@ for (group_name in names(exposures)) {
 }
 
 # histogram of data
-hist(vitcap2$vital.capacity, col = "lightblue", 
+hist(vitcap2$vital.capacity, col = 'lightblue', 
      breaks = 20, ylab = 'Number of Workers',
      xlab = 'Observed Vital Capacity (Liters)',
      main = '')
 # create a histogram from the total dataset
 
-
-# 3 individuals
-hist(noExposure$vital.capacity, breaks = 20, col = rgb(0.68, 0.85, 0.90, alpha = 0.5)) #lightblue
-hist(midExposure$vital.capacity, breaks = 20, col = rgb(0.56, 0.93, 0.56, alpha = 0.5) , add = T)
-hist(longExposure$vital.capacity, breaks = 20, col = rgb(1, 1, 0, alpha = 0.5), add = T)
-
-summary(vitcap2$vital.capacity)
-summary(noExposure$vital.capacity)
-summary(midExposure$vital.capacity)
-summary(longExposure$vital.capacity)
-
+#boxplot of the different groups
 boxplot(vital.capacity ~ group, data = vitcap2, 
         main = '',
         xlab = 'Vital Capacity (in Liters)', 
         ylab = 'Exposure to Cadmium', 
-        col = c('lightblue', 'lightgreen', 'beige'), horizontal = T,
+        col = c('lightpink', 'lightgreen', 'beige'), horizontal = T,
         names = c('Long Term', 'Short Term', 'Control'))
 
 kruskal.test(vital.capacity ~ group, data = vitcap2)
+# insignificant value found
 
-model = aov(vital.capacity ~ group, data = vitcap2)
 
-anova(model)
+# plotting correlation
+plot(vital.capacity ~ age, data = vitcap2, 
+     col = c("darkred", "darkgreen", "tan"),
+     pch = 16,
+     xlab = 'Age', ylab = 'Vital Capacity (Liters)', 
+     main = '')
 
-plot(vital.capacity ~ age, data = vitcap2)
+legend("topright", legend = c("Long-Term", "Mid-Term", "Control"),
+       col = c("darkred", "darkgreen", "tan"), pch = 16)
+
+#it may be useful to show this stuff too because we are examining them
+plot(vital.capacity ~ age, data = longExposure, col = 'darkred',
+     xlab = 'Age', ylab = 'Vital Capacity (Liters)')
+
+plot(vital.capacity ~ age, data = midExposure, col = 'darkgreen',
+     xlab = 'Age', ylab = 'Vital Capacity (Liters)')
+
+plot(vital.capacity ~ age, data = noExposure, col = 'tan',
+     xlab = 'Age', ylab = 'Vital Capacity (Liters)')
+
+
+
+
+
 
 with(vitcap2, cor.test(age, vital.capacity, method = 'spearman' ))
 with(noExposure, cor.test(age, vital.capacity, method = 'spearman' ))

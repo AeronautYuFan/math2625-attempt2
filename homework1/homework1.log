@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.31)  28 JAN 2025 15:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.31)  12 FEB 2025 11:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework1.tex
-(c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework1.tex
+**c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework1/homework1.tex
+(c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework1/homework1.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-10-09>
 (C:\Users\Aeron\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -534,7 +534,7 @@ Package pdftex.def Info: CS2_LF_mdi.png  used on input line 264.
 [5 <./CS2_DCHA_PDI.png> <./CS2_LF_PDI.png> <./CS2_DCHA_mdi.png> <./CS2_LF_mdi.png>]
 
 [6]
-runsystem(latexminted cleantemp  --timestamp 20250128152113 08A52309061284A5F212F6F04C7CEAF9)...disabled (restricted).
+runsystem(latexminted cleantemp  --timestamp 20250212115827 08A52309061284A5F212F6F04C7CEAF9)...disabled (restricted).
 
  (homework1.aux)
  ***********
@@ -548,12 +548,12 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  12644 strings out of 473897
- 253914 string characters out of 5726461
+ 253984 string characters out of 5726461
  764257 words of memory out of 5000000
  35353 multiletter control sequences out of 15000+600000
  565460 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,14n,93p,1743b,635s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 85i,14n,93p,1753b,635s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
 Output written on homework1.pdf (6 pages, 210361 bytes).
 PDF statistics:

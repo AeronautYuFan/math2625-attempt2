@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.31)  12 FEB 2025 10:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.31)  12 FEB 2025 13:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -377,120 +377,40 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 [2]
 
 [3]
-c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework2/homework_2.tex:144: Misplaced \noalign.
-\toprule ->\noalign 
-                    {\ifnum 0=`}\fi \@aboverulesep =\abovetopsep \global \@b...
-l.144 				\toprule
-                  
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
 
-c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework2/homework_2.tex:145: Missing } inserted.
-<inserted text> 
-                }
-l.145 				&
-            \textbf{All Workers (N = 84)} & \textbf{Long-term Exposure (N = ...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+[4]
+<graphs/HistAllWorkers~VitalCap.png, id=29, 619.56468pt x 480.29437pt>
+File: graphs/HistAllWorkers~VitalCap.png Graphic file (type png)
+<use graphs/HistAllWorkers~VitalCap.png>
+Package pdftex.def Info: graphs/HistAllWorkers~VitalCap.png  used on input line 165.
+(pdftex.def)             Requested size: 242.82503pt x 188.23746pt.
+<graphs/BoxPlot_Workers~VitalCap.png, id=30, 619.56468pt x 480.29437pt>
+File: graphs/BoxPlot_Workers~VitalCap.png Graphic file (type png)
+<use graphs/BoxPlot_Workers~VitalCap.png>
+Package pdftex.def Info: graphs/BoxPlot_Workers~VitalCap.png  used on input line 172.
+(pdftex.def)             Requested size: 242.82503pt x 188.23746pt.
 
-c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework2/homework_2.tex:145: Missing } inserted.
-<inserted text> 
-                }
-l.145 				&
-            \textbf{All Workers (N = 84)} & \textbf{Long-term Exposure (N = ...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
 
-c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework2/homework_2.tex:145: Missing } inserted.
-<inserted text> 
-                }
-l.145 				&
-            \textbf{All Workers (N = 84)} & \textbf{Long-term Exposure (N = ...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
+[5 <./graphs/HistAllWorkers~VitalCap.png> <./graphs/BoxPlot_Workers~VitalCap.png>]
 
-c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework2/homework_2.tex:145: Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.145 				&
-            \textbf{All Workers (N = 84)} & \textbf{Long-term Exposure (N = ...
-I'm guessing that you meant to end an alignment here.
+[6] (homework_2.aux)
+ ***********
+LaTeX2e <2024-06-01> patch level 2
+L3 programming layer <2024-10-09>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 6410 strings out of 473897
+ 103086 string characters out of 5726461
+ 506228 words of memory out of 5000000
+ 29206 multiletter control sequences out of 15000+600000
+ 566167 words of font info for 67 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,9n,65p,1607b,413s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on homework_2.pdf (6 pages, 206722 bytes).
+PDF statistics:
+ 100 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework2/homework_2.tex:145: Missing { inserted.
-<inserted text> 
-                {
-l.145 				&
-            \textbf{All Workers (N = 84)} & \textbf{Long-term Exposure (N = ...
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework2/homework_2.tex:145: Undefined control sequence.
-\@BTrule ...\doublerulesep \fi \fi \fi \@BTswitch 
-                                                  
-l.145 				&
-            \textbf{All Workers (N = 84)} & \textbf{Long-term Exposure (N = ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework2/homework_2.tex:145: Misplaced alignment tab character &.
-<recently read> &
-                 
-l.145 				&
-            \textbf{All Workers (N = 84)} & \textbf{Long-term Exposure (N = ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework2/homework_2.tex:145: Misplaced alignment tab character &.
-l.145 				& \textbf{All Workers (N = 84)} &
-                                            \textbf{Long-term Exposure (N = ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework2/homework_2.tex:145: Misplaced alignment tab character &.
-l.145 ... & \textbf{Long-term Exposure (N = 12)} &
-                                                   \textbf{Short-mid Term Ex...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework2/homework_2.tex:145: Misplaced alignment tab character &.
-l.145 ...extbf{Short-mid Term Exposure (N = 28)} &
-                                                   \textbf{Control (N = 44)} \\
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework2/homework_2.tex:146: Misplaced \cr.
-\reserved@c ->\ifnum 0=`{\fi }\cr 
-                                  
-l.146 				\midrule
-                  
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something l
