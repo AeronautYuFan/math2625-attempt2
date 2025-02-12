@@ -120,20 +120,21 @@
 	\end{enumerate}
 
 		\newpage
-		\subsection*{Background}
+	\subsection*{Background}
 				
 		Vital capacity, a measure of lung volume defined as the maximum amount of air a person can expel from their lungs after taking a maximum inhalation, can be used to help diagnose underlying lung disease or dysfunction. If vital capacity is lower than expected, further testing for possible disease or other complications is warranted. Exposure to cadmium, even at low doses, may have impacts on kidney and bone health and at high levels may damage the lungs. Cadmium production increased considerably over the course of the 20th Century and is used across a number of different industries. To assess the potential impact exposure to cadmium might have, we examined the vital capacity in workers from industries that use cadmium in various production processes. Workers were randomly selected from nine different factories: eight PVC factories using cadmium stabilizers in the compounding of PVC and one cadmium-nickel battery factory. We classified the workers as having long term exposure ($>10$ years exposure to cadmium), short to medium term exposure ($<10$ years exposure), and no exposure. Our primary goal is to see if exposure to cadmium impacts the lung functioning of the workers in the industry. It is well known, however, that vital capacity also depends on a number of additional factors, including a person's age. Older workers may also be more likely to have longer periods of exposure, thus we also examine workers' age as a possible confounder.
 
-		\subsection*{Methods}
+	\subsection*{Methods}
 		We tested the vital capacity (VC) of workers who were identified as either having long-term exposure (exceeding 10 years) or short term exposure (less than 10 years). We also randomly measured vitals from workers who had no exposure to form a control group. 12 workers with long-term exposure, 28 with short-term exposure, and 44 with no exposure were selected for the study.
 
 		Analysis of the differences between vital levels was done nonparametrically using a Kruskal-Wallis Test at the nominal level. We also planned to conduct any necessary post-hoc tests using a Mann-Whitney U Test, with a Bonferroni correction to control for multiple tests.
 
-		To check the influence of age as a confounding variable, we checked for correlation between age and vital capacity with a Spearman rank coefficient. We checked for correlation between age and VC of all workers, and then separately in their respective groups (no exposure, short term exposure, and long term exposure). A Bonferroni correction was applied to these four Spearman correlation tests, resulting in a corrected critical threshold of $p < 0.0125$.
+		As a secondary analysis, we checked the influence of age as a confounding variable using Spearman’s rank coefficient. We checked for correlation between age and VC of all workers, and then separately in their respective groups (long-term exposure, short-term exposure, and the control group). A Bonferroni correction was applied to these four Spearman correlation tests, resulting in a corrected critical threshold of $\alpha^* = 0.0125$.
 		
-		\subsection*{Results}
-		Among all workers, we found that the mean VC was 4.392 L with a standard deviation of 0.757 L. The median VC across all workers was 4.530 L, while the 12 workers who had long-term exposure to cadmium specifically had a median VC of 3.865 L, while workers with short-term exposure to the metal had a median VC of 4.615 L. We observed a median VC of 4.530 L in the control group. A more detailed summary of vital capacities for the various workers is available in table 1. 
-		
+	\subsection*{Results}
+
+		There was a greater variation in the vital capacities of workers who experienced long-term cadmium exposure. Additionally, one worker who faced short-term exposure had an unusually low VC. This outlier is shown in figure 2, along with the distributions of the boxplots of all the study cohorts. We did not find evidence to suggest that exposure to cadmium made a difference in the vital capacity of workers $(p = 0.2477, H = 2.790, df = 2)$.
+
 		\begin{table}[h!]
 			\centering
 			\footnotesize
@@ -151,8 +152,6 @@
 				\bottomrule
 			\end{tabular}
 		\end{table}
-
-		There was a greater variation in the vital capacities of workers who experienced long-term cadmium exposure. Additionally, one worker who faced short-term exposure had an unusually low VC. This outlier is shown in figure 2, along with the distributions of the boxplots of all the study cohorts. We did not find evidence to suggest that exposure to cadmium made a difference in the vital capacity of workers $(p = 0.2477, H = 2.790, df = 2)$.
 
 		\newpage
 
@@ -173,6 +172,56 @@
 			  \caption{Boxplots of Vital Capacities Across Cohorts}
 			  \label{fig:boxplots}
 			\end{minipage}
+		\end{figure}
+
+
+
+		We found evidence to suggest that age is a confounding variable for determining vital capacity in this study. Worker age and vital capacity appear to be negatively correlated $(p < 0.001, \rho = -0.544)$. Figures 3 and 4 visualize this association, which also held true in all three cohorts of the study. Table 2 provides a summary of the negative correlation found between all exposure levels. Overall, age had a strong impact on the workers’ vital capacity regardless of exposure to cadmium.
+
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.6\textwidth]{graphs/ScatterAll.png}
+			\caption{Worker Age and Vital Capacity Appear to be Negatively Correlated}
+			\label{fig:histogram}
+		\end{figure}
+
+		\begin{table}[h!]
+			\centering
+			\footnotesize
+			\caption{\textbf{Correlation Found Between Age and Vital Capacity Across all Exposure Levels}}
+			\begin{tabular}{lccc}
+				\toprule
+				\textbf{Group} & \textbf{Spearman’s $\rho$} & \textbf{p-value} & \textbf{Significant at $\alpha^* = 0.0125$ }  \\
+				\midrule
+				All Workers & $-0.544$ & $<0.001$ & Yes \\
+				Long-Term Exposure & $-0.747$ & 0.005 & Yes \\
+				Short-Term Exposure & $-0.557$ & 0.002 & Yes \\
+				Control & $-0.494$ & $<0.001$ & Yes \\
+				\bottomrule
+			\end{tabular}
+		\end{table}
+
+		\begin{figure}[h!]
+			\centering
+			\begin{subfigure}[b]{0.3\textwidth}
+				\includegraphics[width=\textwidth]{graphs/ScatterLongExp.png}
+				\caption{Long-Term Exposure}
+				\label{fig:img1}
+			\end{subfigure}
+			\hspace{0.05\textwidth} % Adds space between the images
+			\begin{subfigure}[b]{0.3\textwidth}
+				\includegraphics[width=\textwidth]{graphs/ScatterShortExp.png}
+				\caption{Short-Term Exposure}
+				\label{fig:img2}
+			\end{subfigure}
+			\hspace{0.05\textwidth}
+			\begin{subfigure}[b]{0.3\textwidth}
+				\includegraphics[width=\textwidth]{graphs/ScatterControl.png}
+				\caption{Control Group}
+				\label{fig:img3}
+			\end{subfigure}
+			\caption{Correlation between Age \& Vital Capacity Found Among All Subgroups of Study}
+			\label{fig:three_images}
 		\end{figure}
 
 

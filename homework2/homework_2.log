@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.31)  12 FEB 2025 13:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.31)  12 FEB 2025 17:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -267,7 +267,11 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count309
 \l__pdf_internal_box=\box62
-) (homework_2.aux)
+) (homework_2.aux
+
+LaTeX Warning: Label `fig:histogram' multiply defined.
+
+)
 \openout1 = `homework_2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -379,38 +383,66 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 [3]
 
 [4]
-<graphs/HistAllWorkers~VitalCap.png, id=29, 619.56468pt x 480.29437pt>
+<graphs/HistAllWorkers~VitalCap.png, id=30, 619.56468pt x 480.29437pt>
 File: graphs/HistAllWorkers~VitalCap.png Graphic file (type png)
 <use graphs/HistAllWorkers~VitalCap.png>
-Package pdftex.def Info: graphs/HistAllWorkers~VitalCap.png  used on input line 165.
+Package pdftex.def Info: graphs/HistAllWorkers~VitalCap.png  used on input line 164.
 (pdftex.def)             Requested size: 242.82503pt x 188.23746pt.
-<graphs/BoxPlot_Workers~VitalCap.png, id=30, 619.56468pt x 480.29437pt>
+<graphs/BoxPlot_Workers~VitalCap.png, id=31, 619.56468pt x 480.29437pt>
 File: graphs/BoxPlot_Workers~VitalCap.png Graphic file (type png)
 <use graphs/BoxPlot_Workers~VitalCap.png>
-Package pdftex.def Info: graphs/BoxPlot_Workers~VitalCap.png  used on input line 172.
+Package pdftex.def Info: graphs/BoxPlot_Workers~VitalCap.png  used on input line 171.
 (pdftex.def)             Requested size: 242.82503pt x 188.23746pt.
+<graphs/ScatterAll.png, id=32, 619.56468pt x 480.29437pt>
+File: graphs/ScatterAll.png Graphic file (type png)
+<use graphs/ScatterAll.png>
+Package pdftex.def Info: graphs/ScatterAll.png  used on input line 183.
+(pdftex.def)             Requested size: 303.53708pt x 235.30232pt.
+<graphs/ScatterLongExp.png, id=33, 619.56468pt x 480.29437pt>
+File: graphs/ScatterLongExp.png Graphic file (type png)
+<use graphs/ScatterLongExp.png>
+Package pdftex.def Info: graphs/ScatterLongExp.png  used on input line 207.
+(pdftex.def)             Requested size: 151.76854pt x 117.64749pt.
+<graphs/ScatterShortExp.png, id=34, 619.56468pt x 480.29437pt>
+File: graphs/ScatterShortExp.png Graphic file (type png)
+<use graphs/ScatterShortExp.png>
+Package pdftex.def Info: graphs/ScatterShortExp.png  used on input line 213.
+(pdftex.def)             Requested size: 151.76854pt x 117.64749pt.
+<graphs/ScatterControl.png, id=35, 619.56468pt x 480.29437pt>
+File: graphs/ScatterControl.png Graphic file (type png)
+<use graphs/ScatterControl.png>
+Package pdftex.def Info: graphs/ScatterControl.png  used on input line 219.
+(pdftex.def)             Requested size: 151.76854pt x 117.64749pt.
 
 
-[5 <./graphs/HistAllWorkers~VitalCap.png> <./graphs/BoxPlot_Workers~VitalCap.png>]
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6] (homework_2.aux)
+
+
+[5 <./graphs/HistAllWorkers~VitalCap.png> <./graphs/BoxPlot_Workers~VitalCap.png> <./graphs/ScatterAll.png>]
+
+[6 <./graphs/ScatterLongExp.png> <./graphs/ScatterShortExp.png> <./graphs/ScatterControl.png>] (homework_2.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-10-09>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 6410 strings out of 473897
- 103086 string characters out of 5726461
- 506228 words of memory out of 5000000
- 29206 multiletter control sequences out of 15000+600000
- 566167 words of font info for 67 fonts, out of 8000000 for 9000
+ 6456 strings out of 473897
+ 104269 string characters out of 5726461
+ 505368 words of memory out of 5000000
+ 29251 multiletter control sequences out of 15000+600000
+ 566466 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,9n,65p,1607b,413s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on homework_2.pdf (6 pages, 206722 bytes).
+ 57i,9n,65p,1607b,492s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on homework_2.pdf (6 pages, 283460 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
+ 128 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

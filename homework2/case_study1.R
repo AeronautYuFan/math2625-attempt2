@@ -47,7 +47,7 @@ for (group_name in names(exposures)) {
 
 # histogram of data
 hist(vitcap2$vital.capacity, col = 'lightblue', 
-     breaks = 20, ylab = 'Number of Workers',
+     breaks = 12, ylab = 'Number of Workers',
      xlab = 'Observed Vital Capacity (Liters)',
      main = '')
 # create a histogram from the total dataset
@@ -76,20 +76,16 @@ legend("topright", legend = c("Long-Term", "Mid-Term", "Control"),
 
 #it may be useful to show this stuff too because we are examining them
 plot(vital.capacity ~ age, data = longExposure, col = 'darkred',
-     xlab = 'Age', ylab = 'Vital Capacity (Liters)')
+     xlab = 'Age', ylab = 'Vital Capacity (Liters)', lwd = 2)
 
 plot(vital.capacity ~ age, data = midExposure, col = 'darkgreen',
-     xlab = 'Age', ylab = 'Vital Capacity (Liters)')
+     xlab = 'Age', ylab = 'Vital Capacity (Liters)', lwd = 2)
 
 plot(vital.capacity ~ age, data = noExposure, col = 'tan',
-     xlab = 'Age', ylab = 'Vital Capacity (Liters)')
-
-
-
-
+     xlab = 'Age', ylab = 'Vital Capacity (Liters)', lwd = 2)
 
 
 with(vitcap2, cor.test(age, vital.capacity, method = 'spearman' ))
-with(noExposure, cor.test(age, vital.capacity, method = 'spearman' ))
-with(midExposure, cor.test(age, vital.capacity, method = 'spearman' ))
 with(longExposure, cor.test(age, vital.capacity, method = 'spearman' ))
+with(midExposure, cor.test(age, vital.capacity, method = 'spearman' ))
+with(noExposure, cor.test(age, vital.capacity, method = 'spearman' ))
