@@ -79,30 +79,32 @@
 
 		Pearson correlation coefficent is defined as
 
-		$$\rho = \frac{Cov(X, Y)}{\sigma_X \sigma_Y}.$$
+		$$r = \frac{Cov(X, Y)}{\sigma_X \sigma_Y}.$$
 
-		We know that
+		The simple linear regression formula is defined as
 
-		\begin{align*}
-			Cov(X, Y) & = E[(X - E(X))(Y - E(Y))] \\
-			& = E[XY - E(X)Y - E(Y)X + E(X)E(Y)] \\
-			& = E(XY) - E(X)E(Y) - E(X)E(Y) + E(X)E(Y) \\
-			& = E(XY) - E(X)E(Y) \\
-		\end{align*}
+		$$Y = \beta_0 + \beta_1X + \epsilon,$$
 
-		The our original equation becomes
+		where $\epsilon \sim N(0, \sigma_\epsilon) $. If we take the variance of both sides of this equation, then it becomes
 
-		$$\rho = \frac{E(XY) - E(X)E(Y)}{\sigma_X \sigma_Y}.$$
+		$$Var(Y) = Var(\beta_0 + \beta_1X + \epsilon).$$
 
-		When we substitute in estimators for expected value and variance, we get
+		Since $\beta_0$ is a constant, we know that $Var(\beta_0) = 0$. We can rewrite this as
 
-		$$r = \frac{}{} $$
+		$$Var(Y) = \beta_1^2Var(X) + \sigma_\epsilon^2.$$
+
+		When we take the square root of both sides, we get
+
+		$$\sigma_Y = \sqrt{\beta_1^2Var(X) + \sigma_\epsilon^2} $$
+
+		When we plug this into the top equation, we get
+
+		$$r = \frac{Cov(X, Y)}{\sigma_X \sqrt{\beta_1^2Var(X) + \sigma_\epsilon^2}}.$$
+
+
 		
-		When we estimate this, we substitute in sample standard deviations for the variances of $X$ and $Y$.
 
-		$$r = \frac{Cov(X, Y)}{s_x s_y}.$$
 
-		When we rewrite the covariance term, we get 
 
 
 	\end{enumerate}
@@ -227,12 +229,17 @@
 		\newpage
 
 		\subsection*{Discussion}
-		Although no difference in vital capacity was observed as a result of the different exposure lengths to cadmium, we observed substantial impacts from a worker’s age on their resulting vital capacity. It’s worth noting that the mean age of workers who faced long-term exposure was higher than both workers who only faced short-term exposure, workers with no exposure, and the overall group in general. This was one of the major limitations of the study, and may have been due to the small number of workers who had long-term exposure. While it makes sense that workers who faced exposure for a longer period of time, a follow-up study should seek to address it by also finding older workers who faced short-term exposure and no exposure. It should also seek to sample a larger number of workers overall, as well as workers from a larger number of factories. This would help to address the issues related to internal and external validity that the study faces. Other factors found to influence vital capacity include gender, athleticism, and other pre-existing medical conditions that vary from person to person (Lemon \& Moersch, 1924, Abboud et. al., 2024)
+		Although no difference in vital capacity was observed as a result of the different exposure lengths to cadmium, we observed substantial impacts from a worker’s age on their resulting vital capacity. This lack of statistically significant difference is corroborated by related findings in the literature. Though Yang and colleagues (2019) also did not find a significant difference in forced vital capacity (in short, a related but more effortful measure of vital capacity) per 1~\(\mu\)g/L blood serum cadmium in their multivariable regression models, they did find significant negative differences in other lung function metrics, patient-predicted FEV\(_1\) and FEV\(_1\)/FVC, with each additional \(\mu\)g/L cadmium. Wang and colleagues (2024) support this result, finding in their meta-analysis that per 1~\(\mu\)g/L cadmium exposure, FEV\(_1\)/FVC level decreased by 47.54\%, which was a statistically significant result. These findings may suggest that in order to capture the full picture of cadmium exposure and lung function, future research should explore including additional metrics like FEV\(_1\) or FEV\(_1\)/FVC alongside vital capacity.
+
+		In terms of age and vital capacity, it is well documented that vital capacity declines with age over time (Cid-Juárez et. al., 2019). It is worth noting that the mean age of workers who faced long-term exposure was higher than both workers who only faced short-term exposure, workers with no exposure, and the overall group in general. This was one of the major limitations of the study and may have been due to the small number of workers who had long-term exposure. While it makes sense that workers who faced exposure for a longer period of time, a follow-up study should seek to address this by also finding older workers who faced short-term exposure and no exposure. It should also seek to sample a larger number of workers overall, as well as workers from a larger number of factories. This would help to address the issues related to internal and external validity that the study faces. Other factors found to influence vital capacity include gender, athleticism, and other pre-existing medical conditions that vary from person to person (Lemon \& Moersch, 1924; Abboud et. al., 2024), so future research should monitor these variables as well for possible confounding.  
+
 
 		\newpage
 		\subsection*{Background}
 		
 		Cystic fibrosis is a genetic disorder that affects the lungs, among other major organs. A mutation in the cystic fibrosis transmembrane conductance regulator (CFTR) gene is the cause, resulting in the dysfunction of the CFTR protein which facilitates the transportation of chloride to the cell surface. Without the additional chloride, mucus lining the cells of vital organs becomes thick and viscous, clogging airways and resulting in difficulty breathing. Additional complications in increased risk of bacterial infection and respiratory failure. Poor growth or weight gain is a common complication as well, and often an early indicator of cystic fibrosis. To assess the relationship between growth and weight and lung functioning in patients with cystic fibrosis, we recruited 23 patients between the ages of 7 and 23 years old. Our primary outcome of interest is the forced expiratory volume in one second (FEV1), a measure of how much air the lungs can expel within the first second of exhaling. We wish to relate FEV1 to two predictors of interest related to growth and weight, specifically the body mass category of the patient and their weight ($kg$). Cystic fibrosis patients with poorer growth relative to normally developing children and lower weight may have lower lung functioning. Age may be potential confounder as lung functioning tends to improve with age and weight should increase as the patient gets older. Thus we will also examine potential age confounding in our analysis.
+
+		\subsection*{Methods}
 		
 \end{document}
 
