@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1739399535.72969 "c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework2/homework_2.tex" "homework_2.pdf" "homework_2" 1739399536.45733 0
+["pdflatex"] 1739455305.00108 "c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework2/homework_2.tex" "homework_2.pdf" "homework_2" 1739455306.24954 0
   "C:/Users/Aeron/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1738073244 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Aeron/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1730427297 11948316 e042cc6d779bf190967185cc980c2ef9 ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
@@ -87,15 +87,15 @@
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/tools/enumerate.sty" 1718356376 3468 ad69b54642e68f9fdf39ec1a16dd7341 ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/tools/longtable.sty" 1718356376 15033 652f156c2f139501300900190cae68c4 ""
   "C:/Users/Aeron/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework2/homework_2.tex" 1739399534 13521 1fc42ee937773eb0e44f79e23bbc2f7b ""
+  "c:/Users/Aeron/Documents/Repos/stats/math2625/math2625-attempt2/homework2/homework_2.tex" 1739455302 13551 4937d4a577c360ca537c087a99f4db05 ""
   "graphs/BoxPlot_Workers~VitalCap.png" 1739372880 9121 31ffe1eb1c9d4c6da1992bc2057bf01c ""
   "graphs/HistAllWorkers~VitalCap.png" 1739326136 9717 09e69666075c9e608afa41572e627b02 ""
   "graphs/ScatterAll.png" 1739374531 9354 4cb9d5a515bf37942831ecee4429ae5e ""
   "graphs/ScatterControl.png" 1739381720 7354 913bc8d8e2976ec97cd7395ed190c696 ""
   "graphs/ScatterLongExp.png" 1739381703 6601 ef7547b534c5009c51b61a2dad3ba371 ""
   "graphs/ScatterShortExp.png" 1739381711 6748 32e8c56f642f4e239738e46cb23312e1 ""
-  "homework_2.aux" 1739399536 1456 3a1ab330a6193c50d8a481cae71d5378 "pdflatex"
-  "homework_2.tex" 1739399534 13521 1fc42ee937773eb0e44f79e23bbc2f7b ""
+  "homework_2.aux" 1739455305 1456 c1268a854bffa43e431a351f76eed9f6 "pdflatex"
+  "homework_2.tex" 1739455302 13551 4937d4a577c360ca537c087a99f4db05 ""
   (generated)
   "homework_2.aux"
   "homework_2.log"
