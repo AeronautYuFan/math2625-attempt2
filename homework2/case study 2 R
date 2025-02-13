@@ -1,0 +1,8 @@
+cf <- read.table('cf.txt', header = TRUE)
+
+#kendalls
+with(cf, cor.test(fev1, bmp, method = 'kendall'))
+with(cf, cor.test(fev1, weight, method = 'kendall'))
+
+with(cf, cor.test(fev1, age, method = 'kendall'))
+with(cf, cor.test(age, weight, method = 'kendall'))
