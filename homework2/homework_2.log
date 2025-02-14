@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.31)  13 FEB 2025 15:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.10.31)  13 FEB 2025 22:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -263,10 +263,34 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count307
 \@lastruleclass=\count308
 \@thisrulewidth=\dimen184
-) (C:\Users\Aeron\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+) (C:\Users\Aeron\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count309
+\lst@gtempboxa=\box62
+\lst@token=\toks33
+\lst@length=\count310
+\lst@currlwidth=\dimen185
+\lst@column=\count311
+\lst@pos=\count312
+\lst@lostspace=\dimen186
+\lst@width=\dimen187
+\lst@newlines=\count313
+\lst@lineno=\count314
+\lst@maxwidth=\dimen188
+ (C:\Users\Aeron\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
+File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
+) (C:\Users\Aeron\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
+\c@lstnumber=\count315
+\lst@skipnumbers=\count316
+\lst@framebox=\box63
+) (C:\Users\Aeron\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2024/09/23 1.10c listings configuration
+))
+Package: listings 2024/09/23 1.10c (Carsten Heinz)
+ (C:\Users\Aeron\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count309
-\l__pdf_internal_box=\box62
+\l__color_backend_stack_int=\count317
+\l__pdf_internal_box=\box64
 ) (homework_2.aux
 
 LaTeX Warning: Label `fig:histogram' multiply defined.
@@ -274,20 +298,20 @@ LaTeX Warning: Label `fig:histogram' multiply defined.
 )
 \openout1 = `homework_2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
-LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -325,17 +349,17 @@ LaTeX Font Info:    ... okay on input line 31.
 
 (C:\Users\Aeron\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count310
-\scratchdimen=\dimen185
-\scratchbox=\box63
-\nofMPsegments=\count311
-\nofMParguments=\count312
-\everyMPshowfont=\toks33
-\MPscratchCnt=\count313
-\MPscratchDim=\dimen186
-\MPnumerator=\count314
-\makeMPintoPDFobject=\count315
-\everyMPtoPDFconversion=\toks34
+\scratchcounter=\count318
+\scratchdimen=\dimen189
+\scratchbox=\box65
+\nofMPsegments=\count319
+\nofMParguments=\count320
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count321
+\MPscratchDim=\dimen190
+\MPnumerator=\count322
+\makeMPintoPDFobject=\count323
+\everyMPtoPDFconversion=\toks35
 ) (C:\Users\Aeron\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -343,34 +367,36 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
  (C:\Users\Aeron\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \celsius on input line 31.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 31.
+LaTeX Info: Redefining \celsius on input line 32.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 32.
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 31.
-Package gensymb Info: Using \Omega for \ohm on input line 31.
+LaTeX Info: Redefining \ohm on input line 32.
+Package gensymb Info: Using \Omega for \ohm on input line 32.
 
 Package gensymb Warning: Not defining \micro.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
+\c@lstlisting=\count324
+LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
 (C:\Users\Aeron\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
  (C:\Users\Aeron\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 45.
+(amsmath)                 on input line 46.
 
 
 
@@ -386,32 +412,32 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 <graphs/HistAllWorkers~VitalCap.png, id=30, 619.56468pt x 480.29437pt>
 File: graphs/HistAllWorkers~VitalCap.png Graphic file (type png)
 <use graphs/HistAllWorkers~VitalCap.png>
-Package pdftex.def Info: graphs/HistAllWorkers~VitalCap.png  used on input line 166.
+Package pdftex.def Info: graphs/HistAllWorkers~VitalCap.png  used on input line 171.
 (pdftex.def)             Requested size: 242.82503pt x 188.23746pt.
 <graphs/BoxPlot_Workers~VitalCap.png, id=31, 619.56468pt x 480.29437pt>
 File: graphs/BoxPlot_Workers~VitalCap.png Graphic file (type png)
 <use graphs/BoxPlot_Workers~VitalCap.png>
-Package pdftex.def Info: graphs/BoxPlot_Workers~VitalCap.png  used on input line 173.
+Package pdftex.def Info: graphs/BoxPlot_Workers~VitalCap.png  used on input line 178.
 (pdftex.def)             Requested size: 242.82503pt x 188.23746pt.
 <graphs/ScatterAll.png, id=32, 619.56468pt x 480.29437pt>
 File: graphs/ScatterAll.png Graphic file (type png)
 <use graphs/ScatterAll.png>
-Package pdftex.def Info: graphs/ScatterAll.png  used on input line 185.
+Package pdftex.def Info: graphs/ScatterAll.png  used on input line 190.
 (pdftex.def)             Requested size: 303.53708pt x 235.30232pt.
 <graphs/ScatterLongExp.png, id=33, 619.56468pt x 480.29437pt>
 File: graphs/ScatterLongExp.png Graphic file (type png)
 <use graphs/ScatterLongExp.png>
-Package pdftex.def Info: graphs/ScatterLongExp.png  used on input line 209.
+Package pdftex.def Info: graphs/ScatterLongExp.png  used on input line 214.
 (pdftex.def)             Requested size: 151.76854pt x 117.64749pt.
 <graphs/ScatterShortExp.png, id=34, 619.56468pt x 480.29437pt>
 File: graphs/ScatterShortExp.png Graphic file (type png)
 <use graphs/ScatterShortExp.png>
-Package pdftex.def Info: graphs/ScatterShortExp.png  used on input line 215.
+Package pdftex.def Info: graphs/ScatterShortExp.png  used on input line 220.
 (pdftex.def)             Requested size: 151.76854pt x 117.64749pt.
 <graphs/ScatterControl.png, id=35, 619.56468pt x 480.29437pt>
 File: graphs/ScatterControl.png Graphic file (type png)
 <use graphs/ScatterControl.png>
-Package pdftex.def Info: graphs/ScatterControl.png  used on input line 221.
+Package pdftex.def Info: graphs/ScatterControl.png  used on input line 226.
 (pdftex.def)             Requested size: 151.76854pt x 117.64749pt.
 
 
@@ -422,29 +448,59 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [5 <./graphs/HistAllWorkers~VitalCap.png> <./graphs/BoxPlot_Workers~VitalCap.png> <./graphs/ScatterAll.png>]
 
 [6 <./graphs/ScatterLongExp.png> <./graphs/ScatterShortExp.png> <./graphs/ScatterControl.png>]
+Overfull \hbox (5.34698pt too wide) in paragraph at lines 247--249
+[]\OT1/cmr/m/n/10 Cid-Ju^^Sarez, S., Thiri^^Son-Romero, I., Torre-Bouscoulet, L., Gochicoa-Rangel, L., Mart^^S^^Pnez-Brise~no, D., Hern^^Sandez-
+ []
 
-[7] (homework_2.aux)
+(C:\Users\Aeron\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+) (C:\Users\Aeron\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
+File: lstlang2.sty 2024/09/23 1.10c listings language file
+) (C:\Users\Aeron\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
+File: lstlang3.sty 2024/09/23 1.10c listings language file
+)
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 266.
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 292.
+ (C:\Users\Aeron\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
+File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+
+LaTeX Font Warning: Font shape `TS1/cmtt/bx/n' undefined
+(Font)              using `TS1/cmtt/m/n' instead
+(Font)              for symbol `textdollar' on input line 292.
+
+
+
+[7]
+
+[8]
+
+[9] (homework_2.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-10-09>
  ***********
 
 
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6456 strings out of 473897
- 104269 string characters out of 5726461
- 505368 words of memory out of 5000000
- 29251 multiletter control sequences out of 15000+600000
- 566466 words of font info for 68 fonts, out of 8000000 for 9000
+ 8872 strings out of 473897
+ 135503 string characters out of 5726461
+ 1036301 words of memory out of 5000000
+ 31639 multiletter control sequences out of 15000+600000
+ 567434 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,9n,65p,1607b,492s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on homework_2.pdf (7 pages, 289244 bytes).
+ 57i,9n,65p,1607b,2378s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Aeron\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt0800.pk> <C:\Users\Aeron\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt8.pfb><C:/Users/Aeron/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on homework_2.pdf (9 pages, 333115 bytes).
 PDF statistics:
- 133 PDF objects out of 1000 (max. 8388607)
+ 159 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

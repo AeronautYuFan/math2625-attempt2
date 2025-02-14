@@ -12,6 +12,7 @@
 \usepackage{enumitem}
 \usepackage{gensymb}
 \usepackage{booktabs}
+\usepackage{listings}
 
 \setlength{\marginparwidth}{2cm}
 
@@ -85,9 +86,13 @@
 
 		$$Y = \beta_0 + \beta_1X + \epsilon,$$
 
-		where $\epsilon \sim N(0, \sigma_\epsilon) $. If we take the variance of both sides of this equation, then it becomes
+		where $\epsilon \sim N(0, \sigma_\epsilon) $. When we substitute in estimators, we get
 
-		$$Var(Y) = Var(\beta_0 + \beta_1X + \epsilon).$$
+		$$Y = \hat\beta_0 + \hat\beta_1X + \epsilon,$$
+		
+		If we take the variance of both sides of this equation, then it becomes
+
+		$$Var(Y) = Var(\hat\beta_0 + \hat\beta_1X + \epsilon).$$
 
 		Since $\beta_0$ is a constant, we know that $Var(\beta_0) = 0$. We can rewrite this as
 
@@ -231,7 +236,116 @@
 		\subsection*{Discussion}
 		Although no difference in vital capacity was observed as a result of the different exposure lengths to cadmium, we observed substantial impacts from a worker’s age on their resulting vital capacity. This lack of statistically significant difference is corroborated by related findings in the literature. Though Yang and colleagues (2019) also did not find a significant difference in forced vital capacity (in short, a related but more effortful measure of vital capacity) per 1~\(\mu\)g/L blood serum cadmium in their multivariable regression models, they did find significant negative differences in other lung function metrics, patient-predicted FEV\(_1\) and FEV\(_1\)/FVC, with each additional \(\mu\)g/L cadmium. Wang and colleagues (2024) support this result, finding in their meta-analysis that per 1~\(\mu\)g/L cadmium exposure, FEV\(_1\)/FVC level decreased by 47.54\%, which was a statistically significant result. These findings may suggest that in order to capture the full picture of cadmium exposure and lung function, future research should explore including additional metrics like FEV\(_1\) or FEV\(_1\)/FVC alongside vital capacity.
 
-		In terms of age and vital capacity, it is well documented that vital capacity declines with age over time (Cid-Juárez et. al., 2019). It is worth noting that the mean age of workers who faced long-term exposure was higher than both workers who only faced short-term exposure, workers with no exposure, and the overall group in general. This was one of the major limitations of the study and may have been due to the small number of workers who had long-term exposure. While it makes sense that workers who faced exposure for a longer period of time, a follow-up study should seek to address this by also finding older workers who faced short-term exposure and no exposure. It should also seek to sample a larger number of workers overall, as well as workers from a larger number of factories. This would help to address the issues related to internal and external validity that the study faces. Other factors found to influence vital capacity include gender, athleticism, and other pre-existing medical conditions that vary from person to person (Lemon \& Moersch, 1924; Abboud et. al., 2024), so future research should monitor these variables as well for possible confounding.  
+		In terms of age and vital capacity, it is well documented that vital capacity declines with age over time (Cid-Juárez et. al., 2019). It is worth noting that the mean age of workers who faced long-term exposure was higher than both workers who only faced short-term exposure, workers with no exposure, and the overall group in general. This was one of the major limitations of the study and may have been due to the small number of workers who had long-term exposure. While it makes sense that workers who faced exposure for a longer period of time, a follow-up study should seek to address this by also finding older workers who faced short-term exposure and no exposure. It should also seek to sample a larger number of workers overall, as well as workers from a larger number of factories. This would help to address the issues related to internal and external validity that the study faces. Other factors found to influence vital capacity include gender, athleticism, and other pre-existing medical conditions that vary from person to person (Lemon \& Moersch, 1924; Abboud et. al., 2024), so future research should monitor these variables as well for possible confounding.
+
+		\newpage
+		\subsection*{Appendix}
+
+		\begin{itemize}
+			\item Abboud, H. J., Hussein, H. K., \& Fadhil, S. A. (2024). The effect of increasing the intensity of specialized endurance training on runners' ability in the advanced 1500-meter run in terms of vital capacity indicators (VC) and heart rate (SV). \textit{TechHub Journal}, 7, 19–27.
+
+			\item Cid-Juárez, S., Thirión-Romero, I., Torre-Bouscoulet, L., Gochicoa-Rangel, L., Martínez-Briseño, D., Hernández-Paniagua, I. Y., Delgadillo-Ruiz, O., Guerrero-Zúñiga, S., Del Río-Hidalgo, R., Cortés-Medina, D., Bapo-López, P. E., León-Gómez, P., Bautista-Bernal, A., \& Pérez-Padilla, R. (2019). Inspiratory capacity and vital capacity of healthy subjects 9–81 years of age at moderate-high altitude. \textit{Respiratory Care}, 64(2), 153–160. 
+			https://doi.org/10.4187/respcare.06284
+
+			\item Lemon, W. S., \& Moersch, H. J. (1924). Factors influencing vital capacity. \textit{Archives of Internal Medicine}, 33(1), 136–144. 
+			https://doi.org/10.1001/archinte.1924.00110250139014 
+
+			\item Wang, Y., Wang, D., Hao, H., Cui, J., Huang, L., \& Liang, Q. (2024). The association between cadmium exposure and the risk of chronic obstructive pulmonary disease: A systematic review and meta-analysis. \textit{Journal of Hazardous Materials}, 469(133828). 
+			https://doi.org/10.1016/j.jhazmat.2024.133828 
+
+			\item Yang, G., Sun, T., Han, Y-Y., Rosser, F., Forno, E., Chen, W., \& Celadon, J. C. (2019). Serum cadmium and lead, current wheeze, and lung function in a nationwide study of adults in the United States. \textit{Journal of Allergy and Clinical Immunology: In Practice}, 7(8), 2653–2660. 
+			https://doi.org/10.1016/j.jaip.2019.05.029 
+		\end{itemize}
+
+		\subsection*{R Code}
+		\begin{lstlisting}[language=R, basicstyle=\footnotesize\ttfamily, breaklines=true]
+			# Install necessary packages
+			# install.packages('DescTools')
+			# install.packages('Rfit')
+			# Disclaimer: I used chatGPT to be able to display this in latex, hope that's okay
+			library(ISwR) # data source
+			
+			# Formatting for LaTeX output
+			library(showtext)
+			library(DescTools)
+			library(Rfit)
+			font_add(family = 'ComputerModern', regular = 'cmunrm.ttf') # for consistent formatting in LaTeX
+			showtext_auto()
+			par(family = 'ComputerModern')
+			
+			# Load dataset
+			data('vitcap2')
+			
+			# Subset data by exposure level
+			noExposure = subset(vitcap2, group == '3')
+			midExposure = subset(vitcap2, group == '2')
+			longExposure = subset(vitcap2, group == '1')
+			exposures = list(vitcap2 = vitcap2, 
+							longExposure = longExposure,
+							midExposure = midExposure, 
+							noExposure = noExposure)
+			
+			# Loop through each group and compute summary statistics
+			for (group_name in names(exposures)) {
+			  group_data = exposures[[group_name]]
+			  
+			  vital_sd <- sd(group_data$vital.capacity)
+			  n <- length(group_data$vital.capacity)
+			  
+			  margin = qt(0.975, df = n - 1) * (vital_sd / sqrt(n))  # margin for 95% CI
+			  
+			  # Print results
+			  print(paste('Group:', group_name, '( N =', n, ')'))
+			  print(paste('  Mean Age:', round(mean(group_data$age), 3))) 
+			  print(paste('  Mean Vital Capacity:', round(mean(group_data$vital.capacity), 3),
+						  '| SD:', round(vital_sd, 3)))
+			  print(paste('  95% CI MoE:', round(margin, 3)))
+			  print(paste('  Median VC:', median(group_data$vital.capacity)))
+			  print(paste('  MAD:', mad(group_data$vital.capacity)))
+			  print('')
+			}
+			
+			# Histograms and boxplots
+			hist(vitcap2$vital.capacity, col = 'lightblue', 
+				 breaks = 12, ylab = 'Number of Workers',
+				 xlab = 'Observed Vital Capacity (Liters)',
+				 main = '')
+			
+			boxplot(vital.capacity ~ group, data = vitcap2, 
+					main = '',
+					xlab = 'Vital Capacity (in Liters)', 
+					ylab = 'Exposure to Cadmium', 
+					col = c('lightpink', 'lightgreen', 'beige'), horizontal = T,
+					names = c('Long Term', 'Short Term', 'Control'))
+			
+			kruskal.test(vital.capacity ~ group, data = vitcap2)
+			
+			# Scatter plots and correlation
+			plot(vital.capacity ~ age, data = vitcap2, 
+				 col = c("darkred", "darkgreen", "tan"),
+				 pch = 16,
+				 xlab = 'Age', ylab = 'Vital Capacity (Liters)', 
+				 main = '')
+			
+			legend("topright", legend = c("Long-Term", "Mid-Term", "Control"),
+				   col = c("darkred", "darkgreen", "tan"), pch = 16)
+			
+			# Individual scatter plots
+			plot(vital.capacity ~ age, data = longExposure, col = 'darkred',
+				 xlab = 'Age', ylab = 'Vital Capacity (Liters)', lwd = 2)
+			
+			plot(vital.capacity ~ age, data = midExposure, col = 'darkgreen',
+				 xlab = 'Age', ylab = 'Vital Capacity (Liters)', lwd = 2)
+			
+			plot(vital.capacity ~ age, data = noExposure, col = 'tan',
+				 xlab = 'Age', ylab = 'Vital Capacity (Liters)', lwd = 2)
+			
+			# Spearman correlations
+			with(vitcap2, cor.test(age, vital.capacity, method = 'spearman' ))
+			with(longExposure, cor.test(age, vital.capacity, method = 'spearman' ))
+			with(midExposure, cor.test(age, vital.capacity, method = 'spearman' ))
+			with(noExposure, cor.test(age, vital.capacity, method = 'spearman' ))
+			\end{lstlisting}
 
 
 		\newpage
@@ -240,6 +354,15 @@
 		Cystic fibrosis is a genetic disorder that affects the lungs, among other major organs. A mutation in the cystic fibrosis transmembrane conductance regulator (CFTR) gene is the cause, resulting in the dysfunction of the CFTR protein which facilitates the transportation of chloride to the cell surface. Without the additional chloride, mucus lining the cells of vital organs becomes thick and viscous, clogging airways and resulting in difficulty breathing. Additional complications in increased risk of bacterial infection and respiratory failure. Poor growth or weight gain is a common complication as well, and often an early indicator of cystic fibrosis. To assess the relationship between growth and weight and lung functioning in patients with cystic fibrosis, we recruited 23 patients between the ages of 7 and 23 years old. Our primary outcome of interest is the forced expiratory volume in one second (FEV1), a measure of how much air the lungs can expel within the first second of exhaling. We wish to relate FEV1 to two predictors of interest related to growth and weight, specifically the body mass category of the patient and their weight ($kg$). Cystic fibrosis patients with poorer growth relative to normally developing children and lower weight may have lower lung functioning. Age may be potential confounder as lung functioning tends to improve with age and weight should increase as the patient gets older. Thus we will also examine potential age confounding in our analysis.
 
 		\subsection*{Methods}
+		25 patients between the ages of 7 and 23 were recruited for this study. The participants’ age, body mass as a percent of normal (aggregated into very low, low, \& near normal), age, and forced expiratory volume (in one second) was recorded. 9 participants were under the age of 13, 12 participants were in their teens (13-19), and 4 were at or above the age of 20. 
+
+		We used Spearman’s rank coefficient to examine potential correlation between weight and forced expiratory volume. As a sensitivity analysis, we checked the results using Kendall’s tau. To study the effects of body mass percentage (bmp), we utilized a Kruskal-Wallis test to determine whether there was a difference in FEV1 between patients with a very low bmp, low bmp, or near normal bmp. We planned to conduct any necessary post-hoc comparison tests using the Mann-Whitney U test, with a Bonferroni correction applied to these follow-up analyses $(\alpha^* = 0.0167)$. 
+
+		To check for the confounding impact of age, we also analyzed correlation between subjects’ age and recorded FEV1 using Kendall’s Tau. Aside from post-hoc analyses, all tests were conducted at the nominal level.
+
+		\subsection*{Results}
+
+
 		
 \end{document}
 
