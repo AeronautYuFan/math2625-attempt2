@@ -85,7 +85,7 @@ boxplot(fev1 ~ bmp, data = cf,
         col = c('lightpink', 'beige', 'lightgreen'), horizontal = T,
         names = c('Very Low', 'Low', 'Near Normal'))
 
-#spearmanns
+#spearmans
 with(cf, cor.test(fev1, weight, method = 'spearman'))
 
 with(cf, cor.test(fev1, age, method = 'spearman'))
