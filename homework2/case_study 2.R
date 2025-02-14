@@ -87,15 +87,22 @@ boxplot(fev1 ~ bmp, data = cf,
 
 #spearmanns
 with(cf, cor.test(fev1, weight, method = 'spearman'))
-
-with(cf, cor.test(fev1, age, method = 'spearman'))
-with(cf, cor.test(age, weight, method = 'spearman'))
-
-#kruskal-wallis
-kruskal.test(bmp ~ fev1, data = cf)
-
-#kendalls
 with(cf, cor.test(fev1, weight, method = 'kendall'))
+plot(fev1 ~ weight, data = cf, col = 'darkblue',
+     xlab = 'Weight (kg)', ylab = 'Forced Expiratory Volume (liters)')
 
+#age
+with(cf, cor.test(fev1, age, method = 'spearman'))
 with(cf, cor.test(fev1, age, method = 'kendall'))
-with(cf, cor.test(age, weight, method = 'kendall'))
+
+
+# post hocs
+kruskal.test(fev1 ~ bmp, data = cf)
+wilcox.test(vLow$fev1, low$fev1)
+wilcox.test(norm$fev1, low$fev1)
+wilcox.test(vLow$fev1, norm$fev1)
+
+vLow = subset(cf, bmp == 'Very Low')
+low = subset(cf, bmp == 'Low')
+norm = subset(cf, bmp == 'Near Normal')
+

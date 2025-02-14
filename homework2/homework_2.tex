@@ -94,18 +94,19 @@
 
 		$$Var(Y) = Var(\hat\beta_0 + \hat\beta_1X + \epsilon).$$
 
-		Since $\beta_0$ is a constant, we know that $Var(\beta_0) = 0$. We can rewrite this as
+		Since $\hat\beta_0$ is a constant, we know that $Var(\hat\beta_0) = 0$. We can rewrite this as
 
-		$$Var(Y) = \beta_1^2Var(X) + \sigma_\epsilon^2.$$
+		$$Var(Y) = \hat\beta_1^2Var(X) + \sigma_\epsilon^2.$$
 
 		When we take the square root of both sides, we get
 
-		$$\sigma_Y = \sqrt{\beta_1^2Var(X) + \sigma_\epsilon^2} $$
+		$$\sigma_Y = \sqrt{\hat\beta_1^2Var(X) + \sigma_\epsilon^2} $$
 
 		When we plug this into the top equation, we get
 
-		$$r = \frac{Cov(X, Y)}{\sigma_X \sqrt{\beta_1^2Var(X) + \sigma_\epsilon^2}}.$$
+		$$r = \frac{Cov(X, Y)}{\sigma_X \sqrt{\hat\beta_1^2Var(X) + \sigma_\epsilon^2}}.$$
 
+		This shows that $\hat\beta_1$ is related to $r$.
 
 		
 
@@ -351,7 +352,7 @@
 		\newpage
 		\subsection*{Background}
 		
-		Cystic fibrosis is a genetic disorder that affects the lungs, among other major organs. A mutation in the cystic fibrosis transmembrane conductance regulator (CFTR) gene is the cause, resulting in the dysfunction of the CFTR protein which facilitates the transportation of chloride to the cell surface. Without the additional chloride, mucus lining the cells of vital organs becomes thick and viscous, clogging airways and resulting in difficulty breathing. Additional complications in increased risk of bacterial infection and respiratory failure. Poor growth or weight gain is a common complication as well, and often an early indicator of cystic fibrosis. To assess the relationship between growth and weight and lung functioning in patients with cystic fibrosis, we recruited 23 patients between the ages of 7 and 23 years old. Our primary outcome of interest is the forced expiratory volume in one second (FEV1), a measure of how much air the lungs can expel within the first second of exhaling. We wish to relate FEV1 to two predictors of interest related to growth and weight, specifically the body mass category of the patient and their weight ($kg$). Cystic fibrosis patients with poorer growth relative to normally developing children and lower weight may have lower lung functioning. Age may be potential confounder as lung functioning tends to improve with age and weight should increase as the patient gets older. Thus we will also examine potential age confounding in our analysis.
+		Cystic fibrosis is a genetic disorder that affects the lungs, among other major organs. A mutation in the cystic fibrosis transmembrane conductance regulator (CFTR) gene is the cause, resulting in the dysfunction of the CFTR protein which facilitates the transportation of chloride to the cell surface. Without the additional chloride, mucus lining the cells of vital organs becomes thick and viscous, clogging airways and resulting in difficulty breathing. Additional complications in increased risk of bacterial infection and respiratory failure. Poor growth or weight gain is a common complication as well, and often an early indicator of cystic fibrosis. To assess the relationship between growth and weight and lung functioning in patients with cystic fibrosis, we recruited 25 patients between the ages of 7 and 23 years old. Our primary outcome of interest is the forced expiratory volume in one second (FEV1), a measure of how much air the lungs can expel within the first second of exhaling. We wish to relate FEV1 to two predictors of interest related to growth and weight, specifically the body mass category of the patient and their weight ($kg$). Cystic fibrosis patients with poorer growth relative to normally developing children and lower weight may have lower lung functioning. Age may be potential confounder as lung functioning tends to improve with age and weight should increase as the patient gets older. Thus we will also examine potential age confounding in our analysis.
 
 		\subsection*{Methods}
 		25 patients between the ages of 7 and 23 were recruited for this study. The participants’ age, body mass as a percent of normal (aggregated into very low, low, \& near normal), age, and forced expiratory volume (in one second) was recorded. 9 participants were under the age of 13, 12 participants were in their teens (13-19), and 4 were at or above the age of 20. 
@@ -360,7 +361,252 @@
 
 		To check for the confounding impact of age, we also analyzed correlation between subjects’ age and recorded FEV1 using Kendall’s Tau. Aside from post-hoc analyses, all tests were conducted at the nominal level.
 
+
 		\subsection*{Results}
+		We found a mean weight of 38.404 $kg$ and a median of 37.2 $kg$ among all participants. The mean FEV1 was 34.72 L, whereas the median FEV1 was 33. Subjects with very low BMPs were the youngest on average (10.9 years old), while the low and near normal BMP were on average late adolescents (17.38 \& 16.286, respectively). Mean FEV1 tended to increase with each BMP bucket closer to normal (29.20 L, 33.75 L, 43.714 L), and median FEV1 had an analogous trend (27.5, 33.5, 45 L). A more detailed summary is available in Table 3. Figures 5-8 also show the distribution and spread of these metrics.
+
+		\begin{table}[h]
+			\centering
+			\footnotesize
+			\renewcommand{\arraystretch}{1.2} % Adjust row spacing
+			\caption{Summary of Subject Characteristics}
+			\begin{tabular}{l c c c c}
+				\toprule
+				& \textbf{All Subjects} & \textbf{Very Low BMP} & \textbf{Low BMP} & \textbf{Near Normal BMP} \\
+				& (N = 25) & (N = 10) & (N = 8) & (N = 7) \\
+				\midrule
+				\textbf{Mean Age (years)} & 14.48 & 10.9 & 17.38 & 16.286 \\
+				\textbf{Mean Weight (kg)} & $38.404 \pm 7.388$ & $23.73 \pm 7.566$ & $44.625 \pm 9.399$ & $52.257 \pm 16.845$ \\
+				\textbf{Median Weight (kg)} & 37.2 & 21.3 & 42.3 & 51.2 \\
+				\textbf{Mean FEV1 (liters)} & $34.72 \pm 4.622$ & $29.20 \pm 6.717$ & $33.75 \pm 6.991$ & $43.714 \pm 10.991$ \\
+				\textbf{Median FEV1 (liters)} & 33 & 27.5 & 33.5 & 45 \\
+				\bottomrule
+			\end{tabular}
+			\label{tab:bmp_stats}
+		\end{table}
+
+		\newpage
+
+		\begin{figure}[h!]
+			\centering
+			\tiny
+			\begin{minipage}{0.46\textwidth}
+			  \centering
+			  \tiny
+			  \includegraphics[width=0.9\textwidth]{graph2/HistWeight.png}
+			  \caption{Histogram of Subjects' Weights}
+			  \label{fig:histogram}
+			\end{minipage}\hfill
+			\begin{minipage}{0.46\textwidth}
+			  \centering
+			  \tiny
+			  \includegraphics[width=0.9\textwidth]{graph2/BoxWeight.png}
+			  \caption{Distribution of Subject Weights Aggregated by BMP Level}
+			  \label{fig:boxplots}
+			\end{minipage}
+		\end{figure}
+		
+		\begin{figure}[h!]
+			\centering
+			\tiny
+			\begin{minipage}{0.46\textwidth}
+			  \centering
+			  \tiny
+			  \includegraphics[width=0.9\textwidth]{graph2/HistFEV.png}
+			  \caption{Histogram of Subjects' FEV1}
+			  \label{fig:histogram}
+			\end{minipage}\hfill
+			\begin{minipage}{0.46\textwidth}
+			  \centering
+			  \tiny
+			  \includegraphics[width=0.9\textwidth]{graph2/BoxFEV.png}
+			  \caption{Distribution of Subject FEV1 Aggregated by BMP Level}
+			  \label{fig:boxplots}
+			\end{minipage}
+		\end{figure}
+
+		We found evidence to support a correlation between weight and forced expiratory volume in one second $(p = 0.0196, \rho = 0.4637)$. This finding was backed up by the sensitivity analysis ($p = 0.0141, \tau = 0.3518)$. Additionally, within this study, we did not find evidence to suggest that age was a significant cofounder in determining the FEV1 of a subject.
+
+		\begin{table}[h]
+			\centering
+			\footnotesize
+			\renewcommand{\arraystretch}{1.2}
+			\caption{Correlation Found Between Weight \& FEV1, but not Age and FEV1}
+			\begin{tabular}{lcccc}
+				\toprule
+				& \multicolumn{2}{c}{Spearman’s $\rho$} & \multicolumn{2}{c}{Kendall’s $\tau$} \\
+				\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+				& $\rho$ & p-value & $\tau$ & p-value \\
+				\midrule
+				Weight \& FEV1 & $0.4637$ & 0.0196 & $0.3518$ & 0.0141 \\
+				Age \& FEV1 & $0.2974$ & 0.1487 & $0.2173$ & 0.1386 \\
+				\bottomrule
+			\end{tabular}
+		\end{table}
+
+		\newpage
+
+		\begin{figure}[h!]
+			\centering
+			\includegraphics[width=0.6\textwidth]{graph2/ScatterWeightFEV.png}
+			\caption{Correlation Found Between Weight and Forced Expiratory Volume}
+			\label{fig:histogram}
+		\end{figure}
+
+
+		We found evidence to support a correlation between weight and forced expiratory volume in one second $(p = 0.0196, \rho = 0.4637)$. This finding was supported by the sensitivity analysis ($p = 0.0141, \tau = 0.3518)$. Additionally, within this study, we did not find evidence to suggest that age was a significant cofounder in determining the FEV1 of a subject. 
+		
+		
+		We also found evidence to suggest that there was a difference in FEV1 levels at different levels of BMP within the subjects $(p = 0.0424, H = 6.324, df = 2)$. Post-hoc tests with a Bonferroni adjustment reveal that there was a difference in FEV1 values between participants who had a very low BMP and a near-normal BMP, as shown in Table 5, but an insignificant difference between the other groups.
+
+
+		\begin{table}[h!]
+			\centering
+			\caption{Post-Hoc Mann-Whitney U Test Show Difference in FEV Between Very Low \& Near-Normal Body Mass Proportion}
+			\footnotesize
+			\begin{tabular}{l c c c}
+			\toprule
+			\textbf{Comparison} & \textbf{W Statistic} & \textbf{p-value} & \textbf{Significant at $\alpha^* = 0.0167$} \\
+			\midrule
+			Very Low - Low      & 29                   & 0.3599          & No  \\
+			Normal - Low        & 41.5                 & 0.1314          & No  \\
+			Very Low \& Normal  & 10                   & 0.01667         & Yes \\
+			\bottomrule
+			\end{tabular}
+		\end{table}
+
+		\subsection*{Discussion}
+		Overall, we have found statistically significant evidence of correlation between weight and FEV1, but not BMP. Kerem and colleagues (2013) also found that BMI was a contributor to FEV1 in cystic fibrosis patients, as well as chronic Pseudomonas aeruginosa infection, pancreatic status, and CF-related diabetes. Their statistically significant analyses showed that patients with a poor BMI had, on average, 21.6\% lower FEV1 percentage predicted than patients with a normal BMI. However, they also found that FEV1 was overall negatively associated with age, over their sample of 6 to >45 year olds. Future analyses should be mindful of the demography of their samples, as well as changing patterns in lung function across the lifespan as technologies and average life expectancy of CF patients increase (Balasa \& Chaudary, 2020), and adjust their statistical approaches and assumptions accordingly. Other studies of young children show an analogous relationship between BMI and FEV1 (Sanders et al., 2015). In any case, future studies should expand sample sizes where possible in order to lessen variability and enhance power.
+		
+		\newpage
+		\subsection*{Appendix}
+		\begin{itemize}
+			\item Balasa, G., \& Chaudary, N. (2020). The Lung Life of a Cystic Fibrosis Patient: A Patient and Physician Perspective. Pulmonary Therapy, 6, 159-167. 
+			https://doi.org/10.1007/s41030-020-00130-9
+			\item Kerem, E., Viviani, L., Zolin, A., MacNeill, S., Hatziagorou, E., Ellemunter, H., Drevinek, P., Gulmans, V., Krivec, U., \& Olesen, H. (2013). Factors associated with FEV1 decline in cystic fibrosis: analysis of the ECFS Patient Registry. European Respiratory Journal, 43(1), 125-133. 
+			https://doi.org/10.1183/09031936.00166412
+			\item Sanders, D. B., Emerson, J., Ren, C. L., Schechter, M. S., Gibson, R. L., Morgan, W., \& Rosenfeld, M. (2015). Early Childhood Risk Factors for Decreased FEV1 at Age Six to Seven Years in Young Children with Cystic Fibrosis. Annals of the American Thoracic Society, 12(8), 1170-1176. 
+			https://doi.org/10.1513/AnnalsATS.201504-198OC
+		\end{itemize}
+
+		\subsection*{R Code}
+
+		\begin{lstlisting}[language=R, basicstyle=\tiny]
+			# formatting stuff (add latex font)
+			library(showtext)
+			library(DescTools)
+			library(Rfit)
+			font_add(family = 'ComputerModern', regular = 'cmunrm.ttf') # for consistent formatting in LaTex
+			showtext_auto()
+			par(family = 'ComputerModern')
+			# end formatting stuff
+			
+			cf <- read.table('cf.txt', header = TRUE)
+			
+			# for separating dataframes and parsing through to get summaries
+			vLow = subset(cf, bmp == 'Very Low')
+			low = subset(cf, bmp == 'Low')
+			norm = subset(cf, bmp == 'Near Normal')
+			bodyMasses = list(all = cf, veryLow = vLow, someLow = low, nearNorm = norm)
+			
+			# loop for summary stats
+			for (group_name in names(bodyMasses)) {
+			
+			  # mean age
+			  # mean wt
+			  # median wt
+			  # mean fev1
+			  # median fev1
+			  group_data = bodyMasses[[group_name]]
+			  wt_sd <- sd(group_data$weight)
+			  fev_sd = sd(group_data$fev1)
+			  n <- length(group_data$age)
+			  wt_margin = qt(0.975, df = n - 1) * (wt_sd / sqrt(n))
+			  fev_margin = qt(0.975, df = n - 1) * (fev_sd / sqrt(n))
+			
+			  print(paste('Group:', group_name, '( N =', n, ')')) # for future reference: paste() used to concatenate strings
+			  print(paste('  Mean Age:', round(mean(group_data$age), 3))) # prints mean age
+			  print(paste('  Mean Weight:', round(mean(group_data$weight), 3)))
+			  print(paste('  Weight 95% CI:', round(wt_margin, 3)))
+			  print(paste('  Median Weight:', round(median(group_data$weight), 3)))
+			
+			  print('')
+			  print(paste('  Mean FEV:', round(mean(group_data$fev1), 3)))
+			  print(paste('  FEV 95% CI:', round(fev_margin, 3)))
+			  print(paste('  Median FEV:', round(median(group_data$fev1), 3)))
+			  print('')
+			}
+			
+			for (group_name in names(exposures)) {
+			  group_data = exposures[[group_name]]
+			
+			  vital_sd <- sd(group_data$vital.capacity)
+			  n <- length(group_data$vital.capacity)
+			
+			  margin = qt(0.975, df = n - 1) * (vital_sd / sqrt(n))  # margin for 95% CI
+			
+			  # print results
+			  print(paste('Group:', group_name, '( N =', n, ')')) # for future reference: paste() used to concatenate strings
+			  print(paste('  Mean Age:', round(mean(group_data$age), 3))) # prints mean age
+			  print(paste('  Mean Vital Capacity:', round(mean(group_data$vital.capacity), 3),
+						  '| SD:', round(vital_sd, 3)))
+			  print(paste('  95% CI MoE:', round(margin, 3)))
+			  print(paste('  Median VC:', median(group_data$vital.capacity)))
+			  print(paste('  MAD:', mad(group_data$vital.capacity)))
+			  print('')
+			}
+			
+			hist(cf$weight, col = 'lightblue',
+				 xlab = 'Weight (kg)', ylab = 'Number of Participants',
+				 main = '')
+			
+			hist(cf$fev1, col = 'beige',
+				 xlab = 'Forced Expiratory Volume (liters)', ylab = 'Number of Participants',
+				 main = '')
+			
+			boxplot(weight ~ bmp, data = cf, 
+					main = '',
+					xlab = 'Weight (kg)', 
+					ylab = 'BMP Level', 
+					col = c('lightpink', 'beige', 'lightgreen'), horizontal = T,
+					names = c('Very Low', 'Low', 'Near Normal'))
+			
+			boxplot(fev1 ~ bmp, data = cf, 
+					main = '',
+					xlab = 'Forced Expiratory Volume (liters)', 
+					ylab = 'BMP Level', 
+					col = c('lightpink', 'beige', 'lightgreen'), horizontal = T,
+					names = c('Very Low', 'Low', 'Near Normal'))
+			
+			# Spearmans
+			with(cf, cor.test(fev1, weight, method = 'spearman'))
+			with(cf, cor.test(fev1, weight, method = 'kendall'))
+			plot(fev1 ~ weight, data = cf, col = 'darkblue',
+				 xlab = 'Weight (kg)', ylab = 'Forced Expiratory Volume (liters)')
+			
+			# Age
+			with(cf, cor.test(fev1, age, method = 'spearman'))
+			with(cf, cor.test(fev1, age, method = 'kendall'))
+			
+			# Post-hocs
+			kruskal.test(fev1 ~ bmp, data = cf)
+			wilcox.test(vLow$fev1, low$fev1)
+			wilcox.test(norm$fev1, low$fev1)
+			wilcox.test(vLow$fev1, norm$fev1)
+			
+			vLow = subset(cf, bmp == 'Very Low')
+			low = subset(cf, bmp == 'Low')
+			norm = subset(cf, bmp == 'Near Normal')
+			\end{lstlisting}
+			
+			
+
+
+
+
+
+
+		
 
 
 		
