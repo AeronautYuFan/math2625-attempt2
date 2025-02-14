@@ -419,8 +419,8 @@
 			\begin{minipage}{0.46\textwidth}
 			  \centering
 			  \tiny
-			  \includegraphics[width=0.9\textwidth]{graph2/BoxFEV.png}
-			  \caption{Distribution of Subject FEV1 Aggregated by BMP Level}
+			  \includegraphics[width=0.9\textwidth]{graph2/bmpbar.png}
+			  \caption{Distribution of Subjects across BMP Levels}
 			  \label{fig:boxplots}
 			\end{minipage}
 		\end{figure}
@@ -571,12 +571,14 @@
 					col = c('lightpink', 'beige', 'lightgreen'), horizontal = T,
 					names = c('Very Low', 'Low', 'Near Normal'))
 			
-			boxplot(fev1 ~ bmp, data = cf, 
-					main = '',
-					xlab = 'Forced Expiratory Volume (liters)', 
-					ylab = 'BMP Level', 
-					col = c('lightpink', 'beige', 'lightgreen'), horizontal = T,
-					names = c('Very Low', 'Low', 'Near Normal'))
+			bmpfreq <- table(cf$bmp)
+
+			barplot(bmpfreq,
+			        main = '',
+			        xlab = 'BMP Level', 
+			        ylab = 'Frequency', 
+			        col = c('lightpink', 'beige', 'lightgreen'), horizontal = T,
+			        names = c('Very Low', 'Low', 'Near Normal'))
 			
 			# Spearmans
 			with(cf, cor.test(fev1, weight, method = 'spearman'))
