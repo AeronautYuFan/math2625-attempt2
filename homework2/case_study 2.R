@@ -85,11 +85,14 @@ boxplot(fev1 ~ bmp, data = cf,
         col = c('lightpink', 'beige', 'lightgreen'), horizontal = T,
         names = c('Very Low', 'Low', 'Near Normal'))
 
-#spearmans
+#spearmanns
 with(cf, cor.test(fev1, weight, method = 'spearman'))
 
 with(cf, cor.test(fev1, age, method = 'spearman'))
 with(cf, cor.test(age, weight, method = 'spearman'))
+
+#kruskal-wallis
+kruskal.test(bmp ~ fev1, data = cf)
 
 #kendalls
 with(cf, cor.test(fev1, weight, method = 'kendall'))
