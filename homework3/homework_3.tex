@@ -13,6 +13,7 @@
 \usepackage{gensymb}
 \usepackage{booktabs}
 \usepackage{listings}
+\usepackage{hyperref}
 
 \setlength{\marginparwidth}{2cm}
 
@@ -40,6 +41,8 @@
 	\end{center}
 	
 	Please submit a PDF or .doc version of your homework to Canvas by 3:30pm on the due date. Please type \emph{all} responses. You are encouraged to use \R\ for all calculations.
+
+	Yu Fan Mei, Bailey Coughlan
 		
 	\section*{Theory}
 	\begin{enumerate}
@@ -49,9 +52,75 @@
 			\item Likelihood Ratio Test
 		\end{enumerate}
 
-		The Score Test
+		The likelihood function $L$ for the poisson distribution and the parameter $\mu$ is 
+
+
+		$$L(\mu) = \prod_{i=1}^{n} \frac{\mu^{y_i} e^{-\mu}}{y_i!}.$$
+
+		When we take the log-likelihood and simplify the function, it becomes 
+
+		$$\ell(\mu) = \left( \sum y_i \right) \log(\mu) - n\mu - \sum \log(y_i!).$$
+
+		The first derivative of $\ell(\mu)$ (with respect to $\mu$) is
+
+		$$U(\mu) = \frac{\sum y_i}{\mu} - n.$$
+
+		The Fisher information is
+
+		$$I(\mu) = \frac{n}{\mu}$$
+
+		Then the score test statistic $S$ is
+
+		$$S = \frac{\frac{\sum y_i}{\mu} - n}{\sqrt{\frac{n}{\mu}}}.$$
+
+		When we simplify, we get
+
+		$$S = \frac{\sqrt{\mu}(\sum y_i - n )}{\sqrt{n}}.$$
+
+		We know that $S$ follows a standard normal distribution as $n$ tends towards infinity. Additionally, under the null hypothesis, this means that
+
+		$$S = \frac{\sqrt{\mu_0}(\sum y_i - n )}{\sqrt{n}} \sim N(0, 1).$$
+
+		\newpage
 		
+		The likelihood function $L$ for the poisson distribution and the parameter $\mu$ is 
+
+
+		$$L(\mu) = \prod_{i=1}^{n} \frac{\mu^{y_i} e^{-\mu}}{y_i!}.$$
+
+		When we substitute in our null and alternative hypotheses, $\mu = \mu_0$ and $\mu = \mu_1$ respectively, we can construct the likelihood ratio test statistic. This is defined as
+
+		$$\lambda = \frac{\prod_{i=1}^{n} \frac{\mu_0^{y_i} e^{-\mu_0}}{y_i!}}{\prod_{i=1}^{n} \frac{\hat{\mu}^{y_i} e^{-\hat{\mu}}}{y_i!}}.$$
+
+		We take the log likelihood and simplify the equation further. Finally, we multiply the equation by -2 to align it with the $\chi^2$ distribution, and we are left with
+
+		$$\lambda = 2 \sum_{i=1}^{n} \left( y_i \log\left( \frac{y_i}{\mu_0} \right) - y_i - \mu_0 \right) \sim \chi^2(df = 1).$$
+
 		\item Suppose we have a sample, $x_1, \ldots, x_n$, from the RVs $X_i \stackrel{iid}{\sim} Bern(p)$. We wish to build a confidence interval for $p$ but we know, a priori, that the event of interest is rare. For rare outcomes, it is common to use the complimentary log-log transformation: $g(p) = \log\left[ -\log(1-p) \right]$. First find a $100(1-\alpha)$\% CI for $g(p)$. Then, find a $100(1-\alpha)$\% CI for $p$ itself. State any necessary assumptions.
+		
+		By the chain rule, the derivative $g'(p)$ of $g(p)$ is
+
+		$$\frac{1}{-\log(1 - p) (1 - p)} (-1).$$
+
+		Since $X$ is a bernoulli random variable, we know that
+
+		$$Var(X) = p(1 - p).$$
+
+		Then we have the variance of this transformed random variable, which is
+
+		$$\frac{p}{\log(1 - p)(1 - p)}.$$
+
+		Then the confidence interval for $g(p)$ is
+
+		$$z_{\alpha / 2} \sqrt{\frac{p}{\log(1 - p)^2(1 - p)n}}.$$
+
+		Define this term as $G$ (because I don't feel like rewriting that square root so many times). When we transform this function back, we get a confidence interval constructed by
+
+		$$p = 1 - \exp^{\exp^ { g(p) \pm G }} $$
+
+		This works asymptotically for large $n$ because of the law of large numbers, but we assume that $n$ is large, and that all of the observations are iid.
+
+
 
 	\end{enumerate}
 
@@ -148,6 +217,50 @@
 
 
 	\newpage
+	\subsection*{Appendix}
+
+	\begin{itemize}
+		\item Dobson, R., \& Giovannoni, G. (2019). Multiple sclerosis–a review. \textit{European Journal of Neurology}, 26(1), 27-40.
+		\item Goldenberg, M. M. (2012). Multiple sclerosis review. \textit{Pharmacy and Therapeutics}, 37(3), 175.
+		\item Lamb, Y. N. (2022). Ocrelizumab: a review in multiple sclerosis. \textit{Drugs}, 82(3), 323-334.
+	\end{itemize}
+
+	\subsection*{R Code}
+
+\begin{lstlisting}[language=R, caption={R code for analyzing progression and walk performance in Ocrelizumab treatment}, label={lst:rcode}]
+#install.packages('epitools')
+library(epitools)
+
+#### Case Study 1 ####
+##### 12 week progression #####
+prog12  <- matrix(c(161, 96, 327, 148), nrow = 2, 
+                  dimnames = list(Treatment = c('Ocrelizumab', 'Placebo'), 
+                                  Progression = c('Yes', 'No')))
+
+chisq.test(prog12)
+oddsratio.wald(prog12)
+
+##### 24 week progression #####
+prog24  <- matrix(c(144, 87, 344, 157), nrow = 2, 
+                  dimnames = list(Treatment = c('Ocrelizumab', 'Placebo'), 
+                                  Progression = c('Yes', 'No')))
+
+chisq.test(prog24)
+oddsratio.wald(prog24)
+
+##### 120 week worsened 25-foot walk performance #####
+foot25  <- matrix(c(190, 135, 298, 109), nrow = 2, 
+                  dimnames = list(Treatment = c('Ocrelizumab', 'Placebo'), 
+                                  Worsened = c('Yes', 'No')))
+
+chisq.test(foot25)
+oddsratio.wald(foot25)
+\end{lstlisting}
+
+
+
+
+	\newpage
 	\subsection*{Background}
 	Small cell lung carcinoma, or SCLC, is a highly malignant type of cancer that typically presents in the lungs. Given its tendency to metastasize early, the prognosis is poor with only 10 to 15\% of patients surviving three years after diagnosis. Early diagnosis could potentially improve patient prognosis if treatment can be administered before the cancer metastasizes as SCLC does respond well to chemotherapy and radiotherapy in the early stages. The Harvard Lung Cancer Susceptibility Study was a case-control study conducted to identify possible risk factors associated with SCLC. In total, 1000 cases and 1000 controls were recruited, however after drop-out, there 984 cases and 969 controls available for analysis. While a large number of variables were selected, we are primarily interested in assessing the association between case status and two different genetic markers as well as smoking status. The genetic markers are the single nucleotide polymorphisms (SNPs) rs8034191\_2 and rs1051730\_1 which are found on Chromosome 15 in a region that had previously been identified to contain genes associated with SCLC. We're interested in seeing if either of the two SNPs are associated with SCLC using the appropriate measure of association. At each SNP, there are two possible alleles, A or B. The B allele is considered the risk allele. Subjects can have at most two risk alleles and it is thought that subjects with two risk alleles are at even more risk than those with just one (and those with one are at more risk than those with none). We might also want to see if the environmental factor, smoking status (levels: never, former, current), is associated with presence of SCLC.
 
@@ -156,6 +269,190 @@
 	The initial selection for this case-control study involved 2,000 participants, 1,000 of whom had SCLC (“cases”) and 1,000 who did not (“controls”). Neighborhood control methods were used to match cases and controls as much as possible. After dropout, 984 cases and 969 controls remained in the study. We sampled DNA from the participants, with a specific interest in Chromosome 15 and the two SNPs— rs8034191 2 and rs1051730 1— the SNPs associated with SCLC.
 
 	We used a Pearson’s $\chi^2$ test to examine the potential association between SCLC and the 3 genotypes: homozygous A, homozygous B, and heterozygous. We checked for this association at both SNP sites. We ran a similar analysis with smoking status to check if it was a strong confounder. We planned to conduct post-hoc association tests by observing odds ratios and their respective confidence intervals. For these odds ratios, we used either homozygous A or nonsmokers as reference groups. Initial tests for association were conducted at the nominal level. For post-hoc tests, a Bonferroni correction was applied to control for type I error, resulting in an adjusted $p$-value of $\alpha^* = 0.025$.
+
+	\subsection*{Results}
+	For the rs8034191 2 SNP, we found 724 people with the homozygous A genotype. 939 participants were heterozygous (AB), while 290 had the homozygous B genotype. A more detailed breakdown is available in Table 4. We found that there was an association between a genotype and the frequency of cases and controls $(\chi^2 = 26.088, df = 2, p < 0.0001)$. The post-hoc odds ratios showed that having even one B allele significantly increased the odds of having small cell lung carcinoma. The odds of having SCLC for those with the homozygous A genotype was 0.639 times the odds of having SCLC for those with the heterozygous genotype (97.5\% CI: [0.511, 0.799]). The odds of having SCLC for those with the homozygous A genotype was even lower compared to the homozygous B genotype, being 0.571 times the odds when a person had both B alleles (97.5\% CI: [0.416, 0.781]).
+
+	\begin{table}[h]
+		\centering
+		\footnotesize
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular}{l c c c c}
+			\toprule
+			\textbf{SCLC Status} & \textbf{AA} & \textbf{AB} & \textbf{BB} & \textbf{Total} \\
+			\midrule
+			Has SCLC & 311 & 508 & 165 & 984 \\
+			No SCLC & 413 & 431 & 125 & 969 \\
+			\midrule
+			Total & 724 & 939 & 290 & 1953 \\
+			\bottomrule
+		\end{tabular}
+		\caption{Breakdown of rs8034191 2 Genotype Frequency}
+		\label{tab:genotype_frequency}
+	\end{table}
+
+	\begin{table}[h]
+		\centering
+		\footnotesize
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular}{l c c}
+			\toprule
+			\textbf{Comparison} & \textbf{Odds Ratio} & \textbf{97.5\% Confidence Interval} \\
+			\midrule
+			AA Odds vs. AB Odds & 0.639 & [0.511, 0.799] \\
+			AA Odds vs. BB Odds & 0.571 & [0.416, 0.781] \\
+			\bottomrule
+		\end{tabular}
+		\caption{Pairwise Odds Ratios Show Increased SCLC Risk in B Allele rs8034191 2}
+		\label{tab:odds_ratios}
+	\end{table}
+
+	\newpage
+	For the second SNP, rs1051730 1, we found that 711 of the 1953 subjects had the homozygous A genotype, while 935 of them were heterozygous. 307 participants had the homozygous B genotype. We found that there was a significant association between whether or not a person had SCLC and their genotype $(\chi^2 = 26.938, df = 2, p < 0.0001)$. For this allele, the odds of having SCLC were significantly lower for subjects with the homozygous A genotype when compared directly to both the heterozygous genotype and the homozygous B genotype (AA-AB OR: 0.676, 97.5\% CI: [0.540, 0.845]; AA-BB OR: 0.522, 97.5\% CI: [0.382, 0.712]).
+
+	\begin{table}[h]
+		\centering
+		\footnotesize
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular}{l c c c c}
+			\toprule
+			\textbf{SCLC Status} & \textbf{AA} & \textbf{AB} & \textbf{BB} & \textbf{Total} \\
+			\midrule
+			Has SCLC & 307 & 495 & 182 & 984 \\
+			No SCLC & 404 & 440 & 125 & 969 \\
+			\midrule
+			Total & 711 & 935 & 307 & 1953 \\
+			\bottomrule
+		\end{tabular}
+		\caption{Breakdown of rs1051730 1 Genotype Frequency}
+		\label{tab:genotype_rs1051730}
+	\end{table}
+
+	\begin{table}[h]
+		\centering
+		\footnotesize
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular}{l c c}
+			\toprule
+			\textbf{Comparison} & \textbf{Odds Ratio} & \textbf{97.5\% Confidence Interval} \\
+			\midrule
+			AA Odds vs. AB Odds & 0.676 & [0.540, 0.845] \\
+			AA Odds vs. BB Odds & 0.522 & [0.382, 0.712] \\
+			\bottomrule
+		\end{tabular}
+		\caption{Pairwise Odds Ratios Show Increased SCLC Risk in B Allele rs1051730 1}
+		\label{tab:odds_rs1051730}
+	\end{table}
+
+	Among the 1953 participants in the study, we found that 253 had never smoked, 1,056 were former smokers, and 644 were current smokers. A more detailed breakdown of the participants’ smoking status is available in Table 8. We found that a person’s SCLC status was also associated with their smoking status $(\chi^2 = 49.987, df = 2, p < 0.0001)$. We found that the odds of a person having SCLC were significantly lower if they didn’t smoke directly compared to if they smoked or even if they had quit smoking (vs. former smokers OR: 0.631, 97.5\% CI: [0.455, 0.871]; vs. current smokers OR: 0.373, 07.5\% CI: [0.455, 0.871]).
+
+	\begin{table}[h]
+		\centering
+		\footnotesize
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular}{l c c c c}
+			\toprule
+			\textbf{SCLC Status} & \textbf{Never Smoked} & \textbf{Former Smoker} & \textbf{Current Smoker} & \textbf{Total} \\
+			\midrule
+			Has SCLC & 92 & 502 & 390 & 984 \\
+			No SCLC & 161 & 554 & 254 & 969 \\
+			\midrule
+			Total & 253 & 1056 & 644 & 1953 \\
+			\bottomrule
+		\end{tabular}
+		\caption{Breakdown of Participants’ Smoking Status}
+		\label{tab:smoking_status}
+	\end{table}
+	
+	\newpage
+	\begin{table}[h]
+		\centering
+		\footnotesize
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular}{l c c}
+			\toprule
+			\textbf{Smoker Comparison} & \textbf{Odds Ratio} & \textbf{97.5\% Confidence Interval} \\
+			\midrule
+			Nonsmoker vs. Former Smoker & 0.631 & [0.455, 0.871] \\
+			Nonsmoker vs. Smoker & 0.373 & [0.263, 0.525] \\
+			\bottomrule
+		\end{tabular}
+		\caption{Pairwise Odds Ratios Show Increased SCLC Risk in Smokers \& Former Smokers}
+		\label{tab:odds_smoking}
+	\end{table}
+
+	\subsection*{Discussion}
+	Our findings suggest that both the rs1051730 1 and the rs8034191 2 SNPs are significant genetic contributors to the odds of developing SCLC. This is consistent with findings from other case-control studies for both SNPs (Amos et al., 2009; Hung et al., 2008; Shiraishi et al., 2008). More precisely, we found an association between the risk alleles of each SNP and greater odds of SCLC in what appeared to be an additive model, such that the odds ratio of the homozygous A genotype vs. the heterozygous genotype was below 1, and the odds ratio of the homozygous A genotype vs. the homozygous B genotype was less than the previous AA/AB odds ratio. With this robust evidence base for the rs1051730 1 and the rs8034191 2 SNPs as risk factors, biomedical researchers should direct more attention to the physiological mechanisms of these mutations which give rise to SCLC. More importantly, though, future therapeutic development should use these findings to develop sensitive diagnostic tools to detect these SNPs in the early stages of their proliferation. 
+	
+	Furthermore, we found evidence to support smoking as a likewise tiered risk factor for developing SCLC, also corroborated by other studies like Shiraishi \& colleagues (2008). Further research should seek to disentangle whether smoking status is associated with the prevalence rs1051730 1 and the rs8034191 2 SNP mutations, and future SCLC prevention campaigns could emphasize smoking cessation for the general public as well as in more targeted interventions for the genetically predisposed.
+
+	\newpage
+	
+	\subsection*{Appendix}
+
+	\begin{itemize}
+		\item Amos, C. I., Wu, X., Broderick, P., Gorlov, I. P., Gu, J., Eisen, T., Dong, Q., Zhang, Q., Gu, X., Vijayakrishnan, J., Sullivan, K., Matakidou, A., Wang, Y., Mills, G., Doheny, K., Tsai, Y.-Y., Chen, W. V., Shete, S., Spitz, M. R., \& Houlston, R. S. (2008). Genome-wide association scan of tag SNPs identifies a susceptibility locus for lung cancer at 15q25.1. \textit{Nature Genetics}, 40, 616-622. \url{https://doi.org/10.1038/ng.109}
+		\item Hung, R. J., McKay, J. D., Gaborieau, V., et al. A susceptibility locus for lung cancer maps to nicotinic acetylcholine receptor subunit genes on 15q25. \textit{Nature}, 452, 633-637. \url{https://doi.org/10.1038/nature06885}
+		\item Shiraishi, K., Kohno, T., Kunitoh, H., Watanabe, S., Goto, K., Nishiwaki, Y., Shimada, Y., Hirose, H., Saito, I., Kuchiba, A., Yamamoto, S., \& Yokota, J. (2008). Contribution of nicotine acetylcholine receptor polymorphisms to lung cancer risk in a smoking-independent manner in the Japanese. \textit{Carcinogenesis}, 30(1), 65-70. \url{https://doi.org/10.1093/carcin/bgn257}
+	\end{itemize}
+
+
+	\subsection*{R Code}
+
+	\subsection*{R Code for Case Study 2 Analysis}
+
+\begin{lstlisting}[language=R, caption={R code for analyzing case study 2 with genetic markers and smoking status}, label={lst:rcode_case_study_2}]
+#install.packages('epitools')
+library(epitools)
+
+#### Case Study 2 ####
+##### Case vs First Genetic Marker, rs8034191_2 #####
+first   <- matrix(c(311, 508, 165, 413, 431, 125), nrow = 2, byrow = TRUE, 
+                  dimnames = list(Case = c('Case', 'Control'), Allele = c('AA', 'AB', 'BB')))
+chisq.test(first)
+
+# AB AA comparison (AA in first col)
+ab_aa_comp = matrix(c(first[1,1], first[1,2], first[2,1], first[2,2]), nrow = 2)
+
+# BB AA comp (AA in first col)
+bb_aa_comp = matrix(c(first[1,1], first[1,3], first[2,1], first[2,3]), nrow = 2)
+
+ab_bb_comp = matrix(c(first[2,1], first[2,3], first[2,1], first[2,3]), nrow = 2)
+
+oddsratio(ab_aa_comp, conf.level = 0.975)
+
+oddsratio(bb_aa_comp, conf.level = 0.975)
+
+##### Case vs Second Genetic Marker, rs1051730_1 #####
+secon   <- matrix(c(307, 495, 182, 404, 440, 125), nrow = 2, byrow = TRUE, 
+                  dimnames = list(Case = c('Case', 'Control'), Allele = c('AA', 'AB', 'BB')))
+chisq.test(secon)
+
+# AB AA comparison (AA in first col)
+ab_aa_comp2nd = matrix(c(secon[1,1], secon[1,2], secon[2,1], secon[2,2]), nrow = 2)
+
+# BB AA comp (AA in first col)
+bb_aa_comp2nd = matrix(c(secon[1,1], secon[1,3], secon[2,1], secon[2,3]), nrow = 2)
+
+oddsratio(ab_aa_comp2nd, conf.level = 0.975)
+
+oddsratio(bb_aa_comp2nd, conf.level = 0.975)
+
+##### Case vs Smoking Status #####
+smoke   <- matrix(c(92, 502, 390, 161, 554, 254), nrow = 2, byrow = TRUE, 
+                  dimnames = list(Case = c('Case', 'Control'), SmokeStatus = c('Never', 'Former', 'Current')))
+chisq.test(smoke)
+
+# nonsmoker quitter comparison (nonsmoker in first col)
+nonsmoke_quit = matrix(c(smoke[1,1], smoke[1,2], smoke[2,1], smoke[2,2]), nrow = 2)
+
+# nonsmoker smoker comparison (nonsmoker in first col)
+nonsmoke_smoke = matrix(c(smoke[1,1], smoke[1,3], smoke[2,1], smoke[2,3]), nrow = 2)
+
+oddsratio(nonsmoke_quit, conf.level = 0.975)
+oddsratio(nonsmoke_smoke, conf.level = 0.975)
+\end{lstlisting}
+
 
 
 
