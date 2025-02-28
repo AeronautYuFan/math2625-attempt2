@@ -60,19 +60,6 @@
 	\section*{Case Studies}
 	For the following case studies, create a structured abstract no longer than 4 pages in length (including figures, tables, and references). The Background section is provided for each and should be included in your write-up. You must write the Methods, Results, and Conclusion sections. Code should be included in an appendix as well.
 
-	\begin{enumerate}
-		\item Consider a study of a new treatment for multiple sclerosis. Code to construct the relevant tables is alongside this homework in the file \texttt{hw3Data.R}. Outcomes of interest are described below.
-		
-
-
-		\subsection*{Background}
-		
-		An evolving understanding of the immunopathogenesis of multiple sclerosis suggests that depleting B cells, a type of white blood cell that produces antibodies, could be useful for treatment. We studied ocrelizumab, a humanized monoclonal antibody treatment that selectively depletes CD20-expressing B cells, in the primary progressive form of the disease. In this trial, we randomly assigned 732 patients with primary progressive multiple sclerosis in a 2:1 ratio to receive intravenous ocrelizumab (600 mg) or placebo every 24 weeks for at least 120 weeks and until a prespecified number of confirmed disability progression events had occurred. Disability progression was defined as an increase in the Expanded Disability Status Scale (EDSS). The primary outcome of interest was the percentage of patients with confirmed disability progression at 12 weeks. As secondary analyses, we are interested in 24-week percent confirmed disability progression as well as the 120-week percent worsened performance on the timed 25-foot walk----a quantitative score of mobility and leg function.
-
-		\item Consider a study of determinants for small cell lung cancer. Code to construct the relevant tables is alongside this homework in the file \texttt{hw3Data.R}. Outcomes of interest are described below.
-
-		\subsection*{Background} Small cell lung carcinoma, or SCLC, is a highly malignant type of cancer that typically presents in the lungs. Given its tendency to metastasize early, the prognosis is poor with only 10 to 15\% of patients surviving three years after diagnosis. Early diagnosis could potentially improve patient prognosis if treatment can be administered before the cancer metastasizes as SCLC does respond well to chemotherapy and radiotherapy in the early stages. The Harvard Lung Cancer Susceptibility Study was a case-control study conducted to identify possible risk factors associated with SCLC. In total, 1000 cases and 1000 controls were recruited, however after drop-out, there 984 cases and 969 controls available for analysis. While a large number of variables were selected, we are primarily interested in assessing the association between case status and two different genetic markers as well as smoking status. The genetic markers are the single nucleotide polymorphisms (SNPs) rs8034191\_2 and rs1051730\_1 which are found on Chromosome 15 in a region that had previously been identified to contain genes associated with SCLC. We're interested in seeing if either of the two SNPs are associated with SCLC using the appropriate measure of association. At each SNP, there are two possible alleles, A or B. The B allele is considered the risk allele. Subjects can have at most two risk alleles and it is thought that subjects with two risk alleles are at even more risk than those with just one (and those with one are at more risk than those with none). We might also want to see if the environmental factor, smoking status (levels: never, former, current), is associated with presence of SCLC.
-	\end{enumerate}
 
 
 	\newpage
@@ -87,7 +74,7 @@
 	A check-in was conducted at the 12-week mark as well as the 24-week mark to determine whether subjects had undergone disability progression. As a secondary analysis, we also measured subjects’ performance on the timed 25-foot walk at the end of the study (120 weeks). No subjects were lost during the 120 week-long trial. \\
 
 
-	To examine possible association between the ocrelizumab treatment and disability progression, we used a Pearson’s Chi-Square test. We also examined the odds ratios to examine the magnitude of association. Progression results were collected at the 12 and 24-week mark, and at 120 weeks, subjects’ performance on the 25-foot walk was also measured. All analyses were performed at the nominal level.
+	To examine possible association between the ocrelizumab treatment and disability progression, we used a Pearson’s $\chi^2$ Test. We also examined the odds ratios to examine the magnitude of association. Progression results were collected at the 12 and 24-week mark, and at 120 weeks, subjects’ performance on the 25-foot walk was also measured. All analyses were performed at the nominal level.
 
 
 	\subsection*{Results}
@@ -149,6 +136,28 @@
 			\bottomrule
 		\end{tabular}
 	\end{table}
+
+	\subsection*{Discussion}
+	We found that at the 12 and 24-week mark, the ocrelizumab did not make a significant impact in reducing disability progression. However, at the conclusion of the study, patients who received ocrelizumab during the 120-week duration were less likely to have worsened mobility. We conclude that ocrelizumab works best as a long-term treatment for multiple sclerosis. While short-term findings may differ, this is consistent with findings in other studies and confirms that ocrelizumab works as a treatment for primary progressive multiple sclerosis (Lamb, 2022).
+
+	Follow-up research should seek to look more closely at the impacts over time of administering ocrelizumab. Additionally, the dose-response relationship of ocrelizumab and disability progression should also be explored. Since all subjects were administered a 600 mg dosage, future studies should examine the impacts of different dosages of ocrelizumab on disability progression. One limitation of our study was the aggregation of all participants. Stratification of subjects into different groups based on age, gender, social class, and levels of physical activity may be able to account for the impacts of these potential cofounders. Epidemiologic reviews of the disease suggest that exposure to smoking, low levels of vitamin D, or a history of childhood obesity— all risk factors associated with multiple sclerosis— are worth looking into as confounding variables as well (Dobson \& Giovanni, 2019).
+
+	Finally, multiple sclerosis is known to be a chronic disease with no known cure. Its damaging impacts on the central nervous system include much more than mobility and motor-related functions, which are also worth exploring separately (Goldenberg, 2012). Future studies with longer observation periods could help to examine the long-term impacts of ocrelizumab, which remain unexplored in our short study.
+
+	For the rs8034191 2 SNP, we found 724 people with the homozygous A genotype. 939 participants were heterozygous (AB), while 290 had the homozygous B genotype. We found that there was an association between a genotype and the frequency of cases and controls. The post-hoc odds ratios showed that having even one B allele significantly increased the odds of having small cell lung carcinoma. The odds of having SCLC for those with the homozygous A genotype was 0.639 times the odds of having SCLC for those with the heterozygous genotype (97.5\% CI: [0.511, 0.799]). The odds of having SCLC for those with the homozygous A genotype was even lower compared to the homozygous B genotype, being 0.571 times the odds when a person had both B alleles (97.5\% CI: [0.416, 0.781]).
+
+
+	\newpage
+	\subsection*{Background}
+	Small cell lung carcinoma, or SCLC, is a highly malignant type of cancer that typically presents in the lungs. Given its tendency to metastasize early, the prognosis is poor with only 10 to 15\% of patients surviving three years after diagnosis. Early diagnosis could potentially improve patient prognosis if treatment can be administered before the cancer metastasizes as SCLC does respond well to chemotherapy and radiotherapy in the early stages. The Harvard Lung Cancer Susceptibility Study was a case-control study conducted to identify possible risk factors associated with SCLC. In total, 1000 cases and 1000 controls were recruited, however after drop-out, there 984 cases and 969 controls available for analysis. While a large number of variables were selected, we are primarily interested in assessing the association between case status and two different genetic markers as well as smoking status. The genetic markers are the single nucleotide polymorphisms (SNPs) rs8034191\_2 and rs1051730\_1 which are found on Chromosome 15 in a region that had previously been identified to contain genes associated with SCLC. We're interested in seeing if either of the two SNPs are associated with SCLC using the appropriate measure of association. At each SNP, there are two possible alleles, A or B. The B allele is considered the risk allele. Subjects can have at most two risk alleles and it is thought that subjects with two risk alleles are at even more risk than those with just one (and those with one are at more risk than those with none). We might also want to see if the environmental factor, smoking status (levels: never, former, current), is associated with presence of SCLC.
+
+	\subsection*{Methods}
+
+	The initial selection for this case-control study involved 2,000 participants, 1,000 of whom had SCLC (“cases”) and 1,000 who did not (“controls”). Neighborhood control methods were used to match cases and controls as much as possible. After dropout, 984 cases and 969 controls remained in the study. We sampled DNA from the participants, with a specific interest in Chromosome 15 and the two SNPs— rs8034191 2 and rs1051730 1— the SNPs associated with SCLC.
+
+	We used a Pearson’s $\chi^2$ test to examine the potential association between SCLC and the 3 genotypes: homozygous A, homozygous B, and heterozygous. We checked for this association at both SNP sites. We ran a similar analysis with smoking status to check if it was a strong confounder. We planned to conduct post-hoc association tests by observing odds ratios and their respective confidence intervals. For these odds ratios, we used either homozygous A or nonsmokers as reference groups. Initial tests for association were conducted at the nominal level. For post-hoc tests, a Bonferroni correction was applied to control for type I error, resulting in an adjusted $p$-value of $\alpha^* = 0.025$.
+
+
 
 		
 \end{document}
